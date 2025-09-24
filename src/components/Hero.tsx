@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, Heart } from "lucide-react";
 import heroImage from "@/assets/salon-hero.jpg";
-
 export const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage}
-          alt="Luxury Marina Salon Interior"
-          className="w-full h-full object-cover opacity-90"
-        />
+        <img src={heroImage} alt="Luxury Marina Salon Interior" className="w-full h-full object-cover opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent"></div>
       </div>
 
@@ -20,16 +14,14 @@ export const Hero = () => {
         <div className="max-w-2xl">
           <div className="flex items-center space-x-2 mb-6">
             <div className="flex items-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-primary text-primary" />)}
             </div>
             <span className="text-sm text-muted-foreground">Rated 5 stars by our clients</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Professional
-            <span className="block luxury-gradient">Beauty & Hair</span>
+            <span className="block luxury-gradient text-[B19652_] text-[#b19652]">Beauty & Hair</span>
             <span className="block">Services</span>
           </h1>
 
@@ -78,9 +70,10 @@ export const Hero = () => {
       <div className="absolute top-20 right-20 floating">
         <div className="w-4 h-4 bg-primary/20 rounded-full"></div>
       </div>
-      <div className="absolute bottom-32 left-20 floating" style={{ animationDelay: "1s" }}>
+      <div className="absolute bottom-32 left-20 floating" style={{
+      animationDelay: "1s"
+    }}>
         <div className="w-6 h-6 bg-primary/30 rounded-full"></div>
       </div>
-    </section>
-  );
+    </section>;
 };
