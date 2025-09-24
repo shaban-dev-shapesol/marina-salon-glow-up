@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, Heart } from "lucide-react";
-import heroImage from "@/assets/salon-hero.jpg";
+import heroImage from "@/assets/luxury-salon-hero.jpg";
 export const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -20,22 +20,22 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Professional
-            <span className="block luxury-gradient text-[B19652_] text-[#b19652]">Beauty & Hair</span>
-            <span className="block">Services</span>
+            Transform Your
+            <span className="block luxury-gradient">Beauty Journey</span>
+            <span className="block">with Marina Salon</span>
           </h1>
 
-          <p className="text-xl text-black mb-8 leading-relaxed">
-            Experience luxury at Marina Salon by FKZ. From stunning hair transformations to rejuvenating beauty treatments, we provide exceptional services in an elegant Manchester location.
+          <p className="text-xl text-foreground mb-8 leading-relaxed">
+            Discover luxury beauty treatments and hair transformations at Manchester's premier salon. Our expert stylists create stunning results in an elegant, professional environment.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="book" className="group">
-              Book Your Appointment
+            <Button variant="default" size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg">
+              Book Your Glow-Up
               <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
             </Button>
-            <Button variant="elegant" size="lg">
-              View Our Services
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg">
+              Explore Services
             </Button>
           </div>
 
