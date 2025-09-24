@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Phone, MapPin } from "lucide-react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Menu, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -9,12 +11,126 @@ export const Header = () => {
           Marina Salon
         </div>
         
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-          <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
-          <a href="#gallery" className="text-foreground hover:text-primary transition-colors">Gallery</a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
-        </nav>
+        <NavigationMenu className="hidden md:flex">
+          <NavigationMenuList className="space-x-6">
+            <NavigationMenuItem>
+              <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+                Home
+              </Link>
+            </NavigationMenuItem>
+            
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary">
+                Services
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/services"
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      >
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          All Services
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Explore our complete range of beauty and wellness treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/hair" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Hair Services</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Cuts, coloring, and treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/nails" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Nails & Beauty</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professional nail care
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/facial" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Facial Treatments</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Rejuvenating skincare
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/eyes-brows" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Eyes & Brows</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Expert eye treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/makeup" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Make-up</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professional makeup
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/massages" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Massages</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Relaxing treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/aesthetics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Aesthetics</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Advanced treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/waxing" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Waxing</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Hair removal services
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            
+            <NavigationMenuItem>
+              <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+                Contact
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
 
         <div className="flex items-center space-x-4">
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
