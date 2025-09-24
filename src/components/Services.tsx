@@ -4,6 +4,11 @@ import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap } from "luci
 import hairService from "@/assets/hair-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
 import facialService from "@/assets/facial-service.jpg";
+import eyesBrowsService from "@/assets/eyes-brows-service.jpg";
+import makeupService from "@/assets/makeup-service.jpg";
+import massageService from "@/assets/massage-service.jpg";
+import aestheticsService from "@/assets/aesthetics-service.jpg";
+import waxingService from "@/assets/waxing-service.jpg";
 
 const services = [
   {
@@ -31,30 +36,35 @@ const services = [
     icon: Eye,
     title: "Eyes & Brows",
     description: "Perfect your look with expert eye treatments",
+    image: eyesBrowsService,
     services: ["Eyebrow Shaping", "Lash Extensions", "Tinting", "Threading"]
   },
   {
     icon: Palette,
     title: "Make-up",
     description: "Professional makeup for any occasion",
+    image: makeupService,
     services: ["Special Events", "Bridal", "Photoshoots", "Lessons"]
   },
   {
     icon: Heart,
     title: "Massages",
     description: "Relaxing therapeutic treatments",
+    image: massageService,
     services: ["Swedish", "Deep Tissue", "Hot Stone", "Aromatherapy"]
   },
   {
     icon: Zap,
     title: "Aesthetics",
     description: "Advanced beauty treatments",
+    image: aestheticsService,
     services: ["Botox", "Fillers", "Chemical Peels", "Microneedling"]
   },
   {
     icon: Flower,
     title: "Waxing",
     description: "Professional hair removal services",
+    image: waxingService,
     services: ["Full Body", "Brazilian", "Eyebrow", "Upper Lip"]
   }
 ];

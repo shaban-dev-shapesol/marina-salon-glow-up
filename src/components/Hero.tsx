@@ -33,7 +33,7 @@ export const Hero = () => {
             <span className="block">Services</span>
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-xl text-black mb-8 leading-relaxed">
             Experience luxury at Marina Salon by FKZ. From stunning hair transformations to rejuvenating beauty treatments, we provide exceptional services in an elegant Manchester location.
           </p>
 
