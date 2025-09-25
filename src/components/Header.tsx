@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "./MobileMenu";
 export const Header = () => {
@@ -167,7 +167,11 @@ export const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
-            <a href="tel:+123456789" className="flex items-center space-x-1 hover:text-primary transition-colors">
+            <div className="flex items-center space-x-1">
+              <Clock className="h-4 w-4" />
+              <span>Mon-Sun 10AM-7PM</span>
+            </div>
+            <a href="tel:01613322350" className="flex items-center space-x-1 hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               <span>Book Now</span>
             </a>

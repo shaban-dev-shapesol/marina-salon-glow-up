@@ -112,8 +112,8 @@ const ContactPage = () => {
                     <CardContent>
                       <div className="space-y-1 text-sm">
                         <div className="flex justify-between">
-                          <span>Monday - Sunday</span>
-                          <span className="font-semibold">10:00 AM - 7:00 PM</span>
+                          <span>Mon-Sun</span>
+                          <span className="font-semibold">10AM-7PM</span>
                         </div>
                       </div>
                     </CardContent>

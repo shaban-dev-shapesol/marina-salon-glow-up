@@ -54,16 +54,8 @@ export const Contact = () => {
               <CardContent>
                 <div className="space-y-2 text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 8:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>10:00 AM - 5:00 PM</span>
+                    <span>Mon-Sun</span>
+                    <span>10AM-7PM</span>
                   </div>
                 </div>
               </CardContent>
