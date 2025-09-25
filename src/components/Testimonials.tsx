@@ -13,7 +13,7 @@ export const Testimonials = () => {
     verified: true,
     avatar: "FT"
   }, {
-    name: "Sarah Johnson", 
+    name: "Sarah Johnson",
     rating: 5,
     date: "1 month ago",
     text: "Absolutely love this salon! The attention to detail is outstanding and FKZ really listens to what you want. The results are always perfect and the atmosphere is so relaxing.",
@@ -22,7 +22,7 @@ export const Testimonials = () => {
   }, {
     name: "Emma Williams",
     rating: 5,
-    date: "1 month ago", 
+    date: "1 month ago",
     text: "Best hair experience I've ever had! The salon is beautiful and the service is exceptional. FKZ is a true artist - I wouldn't go anywhere else for my hair.",
     verified: true,
     avatar: "EW"
@@ -41,7 +41,7 @@ export const Testimonials = () => {
     verified: true,
     avatar: "RD"
   }, {
-    name: "Sophie Anderson", 
+    name: "Sophie Anderson",
     rating: 5,
     date: "3 months ago",
     text: "The nail services here are phenomenal! Every set is a work of art and the attention to detail is incredible. The results last for weeks looking perfect. Highly recommend!",
@@ -50,7 +50,7 @@ export const Testimonials = () => {
   }, {
     name: "Amanda Cooper",
     rating: 5,
-    date: "3 months ago", 
+    date: "3 months ago",
     text: "Incredible service and results! The team at Marina Salon really care about their clients and it shows in every detail. The salon is beautiful and the atmosphere is so relaxing.",
     verified: true,
     avatar: "AC"
@@ -187,41 +187,7 @@ export const Testimonials = () => {
           </div>
 
           {/* Review Platforms */}
-          <div className="mt-16 text-center animate-on-scroll animate-on-scroll-delay-2">
-            <h3 className="text-2xl font-semibold mb-8">Find Us On</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <button className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500 hover-scale group" onClick={() => window.open('https://www.google.com/maps/place/Marina+Salon+by+FKZ/@53.4834956,-2.2263103,17z/data=!4m15!1m8!3m7!1s0x487bb1a49fc6465d:0xf4cae867d99770d4!2s3-5+Keepers+Quay,+Manchester+M4+6GL,+UK!3b1!8m2!3d53.4834956!4d-2.2237354!16s%2Fg%2F11mcftq033!3m5!1s0x487bb1a94b5a2de7:0xb79bb11bd9cb307c!8m2!3d53.4831995!4d-2.2237837!16s%2Fg%2F11pc635vzt?entry=ttu', '_blank')}>
-                <div className="flex items-center justify-center space-x-2 mb-2">
-                  <Star className="h-5 w-5 text-primary group-hover:animate-pulse" />
-                  <span className="font-semibold">Google</span>
-                  <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <p className="text-sm text-muted-foreground">4.9 • 796 reviews</p>
-                <p className="text-xs text-primary mt-1">Click to view</p>
-              </button>
-              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2 mb-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">Facebook</span>
-                </div>
-                <p className="text-sm text-muted-foreground">4.9 • 85 reviews</p>
-              </div>
-              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2 mb-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">Yelp</span>
-                </div>
-                <p className="text-sm text-muted-foreground">5.0 • 95 reviews</p>
-              </div>
-              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2 mb-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">Treatwell</span>
-                </div>
-                <p className="text-sm text-muted-foreground">4.8 • 200 reviews</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
