@@ -2,12 +2,8 @@ import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Menu, Phone, MapPin, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { BookingModal } from "./BookingModal";
 
 export const Header = () => {
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-
   return (
     <header className="glass-effect sticky top-0 z-50 w-full border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -155,20 +151,17 @@ export const Header = () => {
           <Button 
             variant="luxury" 
             size="sm"
-            onClick={() => setIsBookingModalOpen(true)}
+            asChild
           >
-            Book Appointment
+            <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+              Book Appointment
+            </a>
           </Button>
           <Button variant="ghost" size="sm" className="md:hidden">
             <Menu className="h-4 w-4" />
           </Button>
         </div>
       </div>
-      
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
-      />
     </header>
   );
 };

@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Check, Star, Crown, Sparkles } from "lucide-react";
-import { useState } from "react";
-import { BookingModal } from "./BookingModal";
 
 export const Pricing = () => {
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-
   const hairServices = [
     { name: "Cut & Blow Dry", price: "£45-65", description: "Professional styling with premium products" },
     { name: "Color & Highlights", price: "£85-150", description: "Full color transformation with expert color matching" },
@@ -134,9 +130,11 @@ export const Pricing = () => {
                 <Button 
                   variant={pkg.popular ? "book" : "elegant"} 
                   className="w-full"
-                  onClick={() => setIsBookingModalOpen(true)}
+                  asChild
                 >
-                  Book Package
+                  <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+                    Book Package
+                  </a>
                 </Button>
               </div>
             ))}
@@ -206,11 +204,6 @@ export const Pricing = () => {
           </div>
         </div>
       </div>
-      
-      <BookingModal 
-        isOpen={isBookingModalOpen} 
-        onClose={() => setIsBookingModalOpen(false)} 
-      />
     </section>
   );
 };
