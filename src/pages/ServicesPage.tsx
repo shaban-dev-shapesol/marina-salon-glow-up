@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star, Brush, Wrench, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
+import { InstagramSection } from "@/components/InstagramSection";
 import hairService from "@/assets/hair-service.jpg";
 import haircutsService from "@/assets/haircuts-service.jpg";
 import hairColoringService from "@/assets/hair-coloring-service.jpg";
@@ -288,6 +289,9 @@ const ServicesPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Instagram Section */}
+        <InstagramSection />
 
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/10">
