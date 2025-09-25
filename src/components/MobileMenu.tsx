@@ -36,10 +36,14 @@ export const MobileMenu = () => {
           <div className="flex items-center justify-between p-6 border-b">
             <Link 
               to="/" 
-              className="text-xl font-bold luxury-gradient"
+              className="hover:opacity-80 transition-opacity"
               onClick={() => setOpen(false)}
             >
-              Marina Salon
+              <img 
+                src="/src/assets/marina-salon-logo.png" 
+                alt="Marina Salon by FKZ" 
+                className="h-6 w-auto"
+              />
             </Link>
             <Button
               variant="ghost"

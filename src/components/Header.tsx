@@ -8,8 +8,12 @@ export const Header = () => {
   return (
     <header className="glass-effect sticky top-0 z-50 w-full border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold luxury-gradient hover:opacity-80 transition-opacity">
-          Marina Salon
+        <Link to="/" className="hover:opacity-80 transition-opacity">
+          <img 
+            src="/src/assets/marina-salon-logo.png" 
+            alt="Marina Salon by FKZ" 
+            className="h-8 w-auto"
+          />
         </Link>
         
         <NavigationMenu className="hidden lg:flex">
