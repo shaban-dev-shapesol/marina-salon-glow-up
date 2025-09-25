@@ -1,5 +1,11 @@
 import { Instagram } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import instagram1 from "@/assets/instagram/instagram-1.jpeg";
+import instagram2 from "@/assets/instagram/instagram-2.jpeg";
+import instagram3 from "@/assets/instagram/instagram-3.jpeg";
+import instagram4 from "@/assets/instagram/instagram-4.jpeg";
+import instagram5 from "@/assets/instagram/instagram-5.jpeg";
+import instagram6 from "@/assets/instagram/instagram-6.jpeg";
 
 interface InstagramPost {
   id: string;
@@ -7,37 +13,37 @@ interface InstagramPost {
   description: string;
 }
 
-// Sample Instagram posts - you can replace these with actual Instagram feed data
+// Real Instagram posts from Marina Salon
 const instagramPosts: InstagramPost[] = [
   {
     id: "1",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&h=300&fit=crop&crop=center",
+    image: instagram1,
     description: "Beautiful hair transformation at Marina Salon"
   },
   {
     id: "2", 
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&h=300&fit=crop&crop=center",
-    description: "Perfect eyebrow shaping and tinting"
+    image: instagram2,
+    description: "Perfect eyebrow shaping and beauty treatment"
   },
   {
     id: "3",
-    image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=300&h=300&fit=crop&crop=center",
-    description: "Stunning nail art designs"
+    image: instagram3,
+    description: "Stunning nail art and beauty services"
   },
   {
     id: "4",
-    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=300&h=300&fit=crop&crop=center",
-    description: "Relaxing facial treatment session"
+    image: instagram4,
+    description: "Professional makeup and beauty treatment"
   },
   {
     id: "5",
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=300&h=300&fit=crop&crop=center",
-    description: "Professional makeup for special events"
+    image: instagram5,
+    description: "Relaxing facial and skincare treatment"
   },
   {
     id: "6",
-    image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=300&h=300&fit=crop&crop=center",
-    description: "Luxury salon experience"
+    image: instagram6,
+    description: "Luxury salon experience at Marina Salon"
   }
 ];
 
