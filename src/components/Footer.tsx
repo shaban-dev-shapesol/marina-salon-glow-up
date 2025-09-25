@@ -11,7 +11,7 @@ export const Footer = () => {
               Professional hair, beauty, and wellness services in the heart of Manchester.
             </p>
             <div className="flex space-x-4">
-              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://instagram.com/marinasalon', '_blank')} />
+              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://www.instagram.com/fatima_fkz_/', '_blank')} />
               <Facebook className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://facebook.com/marinasalon', '_blank')} />
             </div>
           </div>
@@ -38,17 +38,17 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-sm opacity-90">
-              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://maps.google.com/?q=3-5+Keepers+Quay,+Manchester', '_blank')}>
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://www.google.com/maps/dir//Unit+1,+Mansion+House,+3-5+Keepers+Quay,+Manchester+M4+6GL', '_blank')}>
                 <MapPin className="h-4 w-4" />
                 <span>3-5 Keepers Quay, Manchester</span>
               </div>
-              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('tel:01611234567')}>
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('tel:01613322350')}>
                 <Phone className="h-4 w-4" />
-                <span>0161 123 4567</span>
+                <span>0161 332 2350</span>
               </div>
-              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('mailto:info@marinasalonbyfkz.co.uk')}>
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('mailto:hello@marinasalonbyfkz.co.uk')}>
                 <Mail className="h-4 w-4" />
-                <span>info@marinasalonbyfkz.co.uk</span>
+                <span>hello@marinasalonbyfkz.co.uk</span>
               </div>
             </div>
           </div>
@@ -58,16 +58,8 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold">Opening Hours</h4>
             <div className="space-y-1 text-sm opacity-90">
               <div className="flex justify-between">
-                <span>Mon-Fri</span>
-                <span>9AM-8PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>9AM-6PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>10AM-5PM</span>
+                <span>Mon-Sun</span>
+                <span>10AM-7PM</span>
               </div>
             </div>
           </div>

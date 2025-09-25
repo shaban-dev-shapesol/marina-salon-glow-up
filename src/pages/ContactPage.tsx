@@ -51,7 +51,9 @@ const ContactPage = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg font-semibold">+44 161 123 4567</p>
+                      <a href="tel:01613322350" className="text-lg font-semibold hover:text-primary transition-colors">
+                        0161 332 2350
+                      </a>
                     </CardContent>
                   </Card>
 
@@ -68,7 +70,9 @@ const ContactPage = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-lg font-semibold">hello@marinasalon.co.uk</p>
+                      <a href="mailto:hello@marinasalonbyfkz.co.uk" className="text-lg font-semibold hover:text-primary transition-colors">
+                        hello@marinasalonbyfkz.co.uk
+                      </a>
                     </CardContent>
                   </Card>
 
@@ -86,9 +90,9 @@ const ContactPage = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-lg font-semibold">
-                        123 Beauty Street<br />
-                        Manchester, M1 2AB<br />
-                        United Kingdom
+                        Unit 1, Mansion House<br />
+                        3-5 Keepers Quay<br />
+                        Manchester M4 6GL
                       </p>
                     </CardContent>
                   </Card>
@@ -108,16 +112,8 @@ const ContactPage = () => {
                     <CardContent>
                       <div className="space-y-1 text-sm">
                         <div className="flex justify-between">
-                          <span>Monday - Friday</span>
-                          <span className="font-semibold">9:00 AM - 7:00 PM</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Saturday</span>
-                          <span className="font-semibold">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Sunday</span>
-                          <span className="font-semibold">10:00 AM - 5:00 PM</span>
+                          <span>Monday - Sunday</span>
+                          <span className="font-semibold">10:00 AM - 7:00 PM</span>
                         </div>
                       </div>
                     </CardContent>
@@ -128,14 +124,16 @@ const ContactPage = () => {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold mb-4">Follow Us</h3>
                   <div className="flex gap-4">
-                    <Button variant="outline" size="icon" className="rounded-full">
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      className="rounded-full"
+                      onClick={() => window.open('https://www.instagram.com/fatima_fkz_/', '_blank')}
+                    >
                       <Instagram className="h-4 w-4" />
                     </Button>
                     <Button variant="outline" size="icon" className="rounded-full">
                       <Facebook className="h-4 w-4" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full">
-                      <Twitter className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -154,18 +152,18 @@ const ContactPage = () => {
                     <form className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="firstName">First Name</Label>
-                          <Input id="firstName" placeholder="Your first name" />
+                          <Label htmlFor="firstName">First Name *</Label>
+                          <Input id="firstName" placeholder="Your first name" required />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="lastName">Last Name</Label>
-                          <Input id="lastName" placeholder="Your last name" />
+                          <Label htmlFor="lastName">Last Name *</Label>
+                          <Input id="lastName" placeholder="Your last name" required />
                         </div>
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" placeholder="your.email@example.com" />
+                        <Label htmlFor="email">Email *</Label>
+                        <Input id="email" type="email" placeholder="your.email@example.com" required />
                       </div>
                       
                       <div className="space-y-2">
@@ -193,11 +191,12 @@ const ContactPage = () => {
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor="message">Message</Label>
+                        <Label htmlFor="message">Message *</Label>
                         <Textarea 
                           id="message" 
                           placeholder="Tell us about your beauty goals or any questions you have..."
                           className="min-h-[120px]"
+                          required
                         />
                       </div>
                       
@@ -226,9 +225,14 @@ const ContactPage = () => {
                 <div className="bg-muted/30 h-64 flex items-center justify-center rounded-lg">
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                    <p className="text-lg font-semibold">123 Beauty Street</p>
-                    <p className="text-muted-foreground">Manchester, M1 2AB</p>
-                    <Button variant="outline" className="mt-4 hover-scale">
+                    <p className="text-lg font-semibold">Unit 1, Mansion House</p>
+                    <p className="text-lg font-semibold">3-5 Keepers Quay</p>
+                    <p className="text-muted-foreground">Manchester M4 6GL</p>
+                    <Button 
+                      variant="outline" 
+                      className="mt-4 hover-scale"
+                      onClick={() => window.open('https://www.google.com/maps/dir//Unit+1,+Mansion+House,+3-5+Keepers+Quay,+Manchester+M4+6GL', '_blank')}
+                    >
                       Open in Maps
                     </Button>
                   </div>

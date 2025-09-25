@@ -30,11 +30,15 @@ export const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
+                  Unit 1, Mansion House<br />
                   3-5 Keepers Quay<br />
-                  Manchester, UK<br />
-                  M3 5FE
+                  Manchester M4 6GL
                 </p>
-                <Button variant="elegant" className="mt-4 hover-scale">
+                <Button 
+                  variant="elegant" 
+                  className="mt-4 hover-scale"
+                  onClick={() => window.open('https://www.google.com/maps/dir//Unit+1,+Mansion+House,+3-5+Keepers+Quay,+Manchester+M4+6GL', '_blank')}
+                >
                   Get Directions
                 </Button>
               </CardContent>
@@ -75,14 +79,23 @@ export const Contact = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>Call to book: 0161 123 4567</span>
+                  <a href="tel:01613322350" className="hover:text-primary transition-colors">
+                    <span>Call to book: 0161 332 2350</span>
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>info@marinasalonbyfkz.co.uk</span>
+                  <a href="mailto:hello@marinasalonbyfkz.co.uk" className="hover:text-primary transition-colors">
+                    <span>hello@marinasalonbyfkz.co.uk</span>
+                  </a>
                 </div>
                 <div className="flex space-x-4 pt-4">
-                  <Button variant="ghost" size="sm" className="hover-scale">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="hover-scale"
+                    onClick={() => window.open('https://www.instagram.com/fatima_fkz_/', '_blank')}
+                  >
                     <Instagram className="h-5 w-5" />
                   </Button>
                   <Button variant="ghost" size="sm" className="hover-scale">
@@ -115,7 +128,7 @@ export const Contact = () => {
                     Book Online Now
                   </Button>
                   <p className="text-sm text-muted-foreground">
-                    Or call us directly at 0161 123 4567
+                    Or call us directly at <a href="tel:01613322350" className="hover:text-primary transition-colors">0161 332 2350</a>
                   </p>
                 </div>
 

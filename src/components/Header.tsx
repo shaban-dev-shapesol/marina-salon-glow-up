@@ -21,7 +21,7 @@ export const Header = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary">
+              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary font-medium">
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -171,12 +171,12 @@ export const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
-            <a href="tel:+123456789" className="flex items-center space-x-1 hover:text-primary transition-colors">
+            <a href="tel:01613322350" className="flex items-center space-x-1 hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
-              <span>Book Now</span>
+              <span>0161 332 2350</span>
             </a>
             <a 
-              href="https://www.google.com/maps/place/Manchester/" 
+              href="https://www.google.com/maps/dir//Unit+1,+Mansion+House,+3-5+Keepers+Quay,+Manchester+M4+6GL" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center space-x-1 hover:text-primary transition-colors"
