@@ -3,7 +3,6 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 import { Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "./MobileMenu";
-import servicesMenuBg from "@/assets/services-menu-bg.jpg";
 export const Header = () => {
   return <header className="glass-effect sticky top-0 z-50 w-full border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -19,32 +18,21 @@ export const Header = () => {
               </Link>
             </NavigationMenuItem>
             
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary font-medium">
+            <NavigationMenuItem className="text-base font-medium">
+              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary">
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent className="text-base font-medium">
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <Link 
-                        to="/services" 
-                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-black/40 to-black/60 p-6 no-underline outline-none focus:shadow-md relative overflow-hidden"
-                        style={{
-                          backgroundImage: `url(${servicesMenuBg})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 z-0"></div>
-                        <div className="relative z-10">
-                          <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            All Services
-                          </div>
-                          <p className="text-sm leading-tight text-white/90">
-                            Explore our complete range of beauty and wellness treatments
-                          </p>
+                      <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          All Services
                         </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Explore our complete range of beauty and wellness treatments
+                        </p>
                       </Link>
                     </NavigationMenuLink>
                   </li>
