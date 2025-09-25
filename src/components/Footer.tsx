@@ -1,9 +1,7 @@
 import { Heart, Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-foreground text-background py-16">
+  return <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -13,14 +11,8 @@ export const Footer = () => {
               Professional hair, beauty, and wellness services in the heart of Manchester.
             </p>
             <div className="flex space-x-4">
-              <Instagram 
-                className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" 
-                onClick={() => window.open('https://instagram.com/marinasalon', '_blank')}
-              />
-              <Facebook 
-                className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" 
-                onClick={() => window.open('https://facebook.com/marinasalon', '_blank')}
-              />
+              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://instagram.com/marinasalon', '_blank')} />
+              <Facebook className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://facebook.com/marinasalon', '_blank')} />
             </div>
           </div>
 
@@ -40,24 +32,15 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-sm opacity-90">
-              <div 
-                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
-                onClick={() => window.open('https://maps.google.com/?q=3-5+Keepers+Quay,+Manchester', '_blank')}
-              >
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://maps.google.com/?q=3-5+Keepers+Quay,+Manchester', '_blank')}>
                 <MapPin className="h-4 w-4" />
                 <span>3-5 Keepers Quay, Manchester</span>
               </div>
-              <div 
-                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
-                onClick={() => window.open('tel:01611234567')}
-              >
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('tel:01611234567')}>
                 <Phone className="h-4 w-4" />
                 <span>0161 123 4567</span>
               </div>
-              <div 
-                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
-                onClick={() => window.open('mailto:info@marinasalonbyfkz.co.uk')}
-              >
+              <div className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('mailto:info@marinasalonbyfkz.co.uk')}>
                 <Mail className="h-4 w-4" />
                 <span>info@marinasalonbyfkz.co.uk</span>
               </div>
@@ -86,12 +69,11 @@ export const Footer = () => {
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-sm opacity-70 flex items-center justify-center space-x-1">
-            <span>© 2024 Marina Salon by FKZ. Made with</span>
-            <Heart className="h-4 w-4 text-primary" />
-            <span>in Manchester</span>
+            <span>© 2024 Marina Salon. </span>
+            
+            
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
