@@ -19,7 +19,7 @@ export const Header = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary">
+              <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[state=open]:bg-transparent text-foreground hover:text-primary font-medium">
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent className="text-base font-medium">
