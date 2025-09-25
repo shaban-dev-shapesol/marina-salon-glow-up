@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 
 export const Testimonials = () => {
+  useScrollAnimation();
+
   const testimonials = [
     {
       name: "Sarah Manchester",
@@ -58,7 +61,7 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Client <span className="luxury-gradient">Testimonials</span>
             </h2>
@@ -77,18 +80,19 @@ export const Testimonials = () => {
           </div>
 
           {/* Testimonials Carousel */}
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-              dragFree: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
+          <div className="animate-on-scroll animate-on-scroll-delay">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+                dragFree: true,
+              }}
+              className="w-full max-w-5xl mx-auto"
+            >
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="bg-card rounded-xl p-6 md:p-8 shadow-elegant hover:shadow-luxury transition-all duration-300 relative group h-full">
+                  <div className="bg-card rounded-xl p-6 md:p-8 shadow-elegant hover:shadow-luxury transition-all duration-500 relative group h-full hover-lift">
                     {/* Quote Icon */}
                     <div className="absolute top-4 right-4 md:top-6 md:right-6 text-primary/20">
                       <Quote className="h-6 w-6 md:h-8 md:w-8" />
@@ -120,36 +124,37 @@ export const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
+            <CarouselPrevious className="hidden md:flex -left-12 hover-scale" />
+            <CarouselNext className="hidden md:flex -right-12 hover-scale" />
           </Carousel>
+          </div>
 
           {/* Review Platforms */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center animate-on-scroll animate-on-scroll-delay-2">
             <h3 className="text-2xl font-semibold mb-8">Find Us On</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="p-4 rounded-lg bg-card shadow-soft">
+              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
                 <div className="flex items-center justify-center space-x-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Google</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">5.0 • 120 reviews</p>
               </div>
-              <div className="p-4 rounded-lg bg-card shadow-soft">
+              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
                 <div className="flex items-center justify-center space-x-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Facebook</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">4.9 • 85 reviews</p>
               </div>
-              <div className="p-4 rounded-lg bg-card shadow-soft">
+              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
                 <div className="flex items-center justify-center space-x-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Yelp</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">5.0 • 95 reviews</p>
               </div>
-              <div className="p-4 rounded-lg bg-card shadow-soft">
+              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
                 <div className="flex items-center justify-center space-x-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Treatwell</span>

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap } from "lucide-react";
 import hairService from "@/assets/hair-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
@@ -79,10 +80,12 @@ const services = [
 ];
 
 export const Services = () => {
+  useScrollAnimation();
+
   return (
     <section id="services" className="py-20 bg-gradient-to-b from-background to-accent/20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="luxury-gradient">Premium</span> Services
           </h2>
@@ -98,7 +101,8 @@ export const Services = () => {
             return (
               <Card 
                 key={service.title} 
-                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border/50 backdrop-blur-sm bg-card/80"
+                className="group hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 border-border/50 backdrop-blur-sm bg-card/80 hover-lift animate-on-scroll"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center">
                   {service.image && (
@@ -106,7 +110,7 @@ export const Services = () => {
                       <img 
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                       <div className="absolute bottom-4 left-4">
@@ -146,8 +150,8 @@ export const Services = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="luxury" size="lg" asChild>
+        <div className="text-center mt-12 animate-on-scroll">
+          <Button variant="luxury" size="lg" className="hover-scale hover-glow" asChild>
             <Link to="/services">
               View All Services & Pricing
             </Link>

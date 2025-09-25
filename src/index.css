@@ -161,4 +161,62 @@ All colors MUST be HSL.
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
   }
+
+  /* Intersection Observer Animation Classes */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-on-scroll-delay {
+    transition-delay: 0.2s;
+  }
+
+  .animate-on-scroll-delay-2 {
+    transition-delay: 0.4s;
+  }
+
+  .animate-on-scroll-delay-3 {
+    transition-delay: 0.6s;
+  }
+
+  /* Hover animations */
+  .hover-lift {
+    transition: all var(--transition-luxury);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .hover-scale {
+    transition: all var(--transition-smooth);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+    transition: box-shadow var(--transition-smooth);
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+  }
 }
