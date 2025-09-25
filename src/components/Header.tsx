@@ -26,7 +26,7 @@ export const Header = () => {
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                      <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-black/50 to-black/70 p-6 no-underline outline-none focus:shadow-md text-white" style={{backgroundImage: 'url(/src/assets/salon-interior-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                         <div className="mb-2 mt-4 text-lg font-medium">
                           All Services
                         </div>
