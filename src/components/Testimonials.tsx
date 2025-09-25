@@ -1,5 +1,6 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -53,6 +54,37 @@ export const Testimonials = () => {
       rating: 5,
       text: "The nail artistry here is phenomenal! Every set is a masterpiece. The attention to detail and creativity keeps me coming back. Plus, the nails last for weeks looking perfect.",
       image: "SA"
+    }
+  ];
+
+  const googleReviews = [
+    {
+      name: "Maria K.",
+      rating: 5,
+      date: "2 weeks ago",
+      text: "Outstanding service! The staff is incredibly professional and the results exceeded my expectations. I've been to many salons but Marina Salon is truly exceptional.",
+      verified: true
+    },
+    {
+      name: "Jennifer S.",
+      rating: 5,
+      date: "1 month ago", 
+      text: "Best salon experience I've ever had. The attention to detail is remarkable and the atmosphere is so relaxing. Worth every penny!",
+      verified: true
+    },
+    {
+      name: "Amanda R.",
+      rating: 5,
+      date: "3 weeks ago",
+      text: "Incredible transformation! The team listened to exactly what I wanted and delivered perfection. The salon is beautiful and the service is top-notch.",
+      verified: true
+    },
+    {
+      name: "Catherine M.",
+      rating: 5,
+      date: "1 week ago",
+      text: "I drive an hour to come here and it's worth every minute. The quality of service and results are unmatched. Highly recommend!",
+      verified: true
     }
   ];
 
@@ -129,37 +161,114 @@ export const Testimonials = () => {
           </Carousel>
           </div>
 
+          {/* Google Reviews Section */}
+          <div className="mt-20 animate-on-scroll animate-on-scroll-delay-2">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4">
+                Google <span className="luxury-gradient">Reviews</span>
+              </h3>
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-6 w-6 fill-primary text-primary" />
+                  ))}
+                </div>
+                <span className="text-xl font-semibold">5.0</span>
+                <span className="text-muted-foreground">• Based on 150+ Google reviews</span>
+              </div>
+              <Button 
+                variant="outline" 
+                className="group hover-scale"
+                onClick={() => window.open('https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review', '_blank')}
+              >
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Write a Google Review
+              </Button>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {googleReviews.map((review, index) => (
+                <div 
+                  key={index}
+                  className={`bg-card rounded-xl p-6 shadow-elegant hover:shadow-luxury transition-all duration-500 hover-lift animate-on-scroll`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {/* Header with rating and verification */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-1">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                      ))}
+                    </div>
+                    {review.verified && (
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                        Verified
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Review text */}
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 italic">
+                    "{review.text}"
+                  </p>
+
+                  {/* Reviewer info */}
+                  <div className="flex items-center justify-between">
+                    <span className="font-semibold text-sm">{review.name}</span>
+                    <span className="text-xs text-muted-foreground">{review.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Google Business Link */}
+            <div className="text-center mt-8">
+              <Button 
+                className="group hover-scale"
+                onClick={() => window.open('https://g.page/YOUR_GOOGLE_BUSINESS_ID', '_blank')}
+              >
+                <ExternalLink className="h-4 w-4 mr-2" />
+                View All Google Reviews
+              </Button>
+            </div>
+          </div>
+
           {/* Review Platforms */}
           <div className="mt-16 text-center animate-on-scroll animate-on-scroll-delay-2">
             <h3 className="text-2xl font-semibold mb-8">Find Us On</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2">
-                  <Star className="h-5 w-5 text-primary" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              <button 
+                className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500 hover-scale group"
+                onClick={() => window.open('https://g.page/YOUR_GOOGLE_BUSINESS_ID', '_blank')}
+              >
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Star className="h-5 w-5 text-primary group-hover:animate-pulse" />
                   <span className="font-semibold">Google</span>
+                  <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">5.0 • 120 reviews</p>
-              </div>
+                <p className="text-sm text-muted-foreground">5.0 • 150+ reviews</p>
+                <p className="text-xs text-primary mt-1">Click to view</p>
+              </button>
               <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2">
+                <div className="flex items-center justify-center space-x-2 mb-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Facebook</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">4.9 • 85 reviews</p>
+                <p className="text-sm text-muted-foreground">4.9 • 85 reviews</p>
               </div>
               <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2">
+                <div className="flex items-center justify-center space-x-2 mb-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Yelp</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">5.0 • 95 reviews</p>
+                <p className="text-sm text-muted-foreground">5.0 • 95 reviews</p>
               </div>
               <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
-                <div className="flex items-center justify-center space-x-2">
+                <div className="flex items-center justify-center space-x-2 mb-2">
                   <Star className="h-5 w-5 text-primary" />
                   <span className="font-semibold">Treatwell</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">4.8 • 200 reviews</p>
+                <p className="text-sm text-muted-foreground">4.8 • 200 reviews</p>
               </div>
             </div>
           </div>
