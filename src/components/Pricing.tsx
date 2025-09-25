@@ -197,9 +197,9 @@ export const Pricing = () => {
               All prices are starting from and may vary based on consultation. Book your appointment for a personalized quote.
             </p>
             <Button variant="book" size="lg" asChild>
-              <Link to="/contact">
+              <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                 Schedule Consultation
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

@@ -221,8 +221,10 @@ const ServicesPage = () => {
                                 View Details
                               </Link>
                             </Button>
-                            <Button variant="elegant" className="flex-1">
-                              Book Now
+                            <Button variant="elegant" className="flex-1" asChild>
+                              <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
+                                Book Now
+                              </a>
                             </Button>
                           </div>
                         </CardContent>
@@ -244,8 +246,10 @@ const ServicesPage = () => {
               Contact us today to schedule your appointment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="luxury">
-                Book Appointment
+              <Button size="lg" variant="luxury" asChild>
+                <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
+                  Book Appointment
+                </a>
               </Button>
               <Button size="lg" variant="elegant" asChild>
                 <Link to="/contact">Contact Us</Link>

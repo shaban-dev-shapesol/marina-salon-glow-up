@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Menu, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MobileMenu } from "./MobileMenu";
 
 export const Header = () => {
   return (
@@ -11,7 +12,7 @@ export const Header = () => {
           Marina Salon
         </Link>
         
-        <NavigationMenu className="hidden md:flex">
+        <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="space-x-6">
             <NavigationMenuItem>
               <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -157,9 +158,7 @@ export const Header = () => {
               Book Appointment
             </a>
           </Button>
-          <Button variant="ghost" size="sm" className="md:hidden">
-            <Menu className="h-4 w-4" />
-          </Button>
+          <MobileMenu />
         </div>
       </div>
     </header>

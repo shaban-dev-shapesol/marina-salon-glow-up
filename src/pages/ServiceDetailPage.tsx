@@ -253,8 +253,10 @@ const ServiceDetailPage = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button size="lg" variant="luxury">
-                    Book Appointment
+                  <Button size="lg" variant="luxury" asChild>
+                    <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
+                      Book Appointment
+                    </a>
                   </Button>
                   <Button size="lg" variant="elegant" asChild>
                     <Link to="/contact">Ask Questions</Link>
@@ -301,8 +303,10 @@ const ServiceDetailPage = () => {
                         <Clock className="h-3 w-3" />
                         <span>{treatment.duration}</span>
                       </div>
-                      <Button size="sm" variant="elegant">
-                        Book Now
+                      <Button size="sm" variant="elegant" asChild>
+                        <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
+                          Book Now
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
@@ -340,8 +344,10 @@ const ServiceDetailPage = () => {
               and let us help you look and feel your absolute best.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="luxury">
-                Book Appointment
+              <Button size="lg" variant="luxury" asChild>
+                <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
+                  Book Appointment
+                </a>
               </Button>
               <Button size="lg" variant="elegant" asChild>
                 <Link to="/contact">Contact Us</Link>
