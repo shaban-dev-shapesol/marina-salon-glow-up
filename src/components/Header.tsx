@@ -26,11 +26,11 @@ export const Header = () => {
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-black/50 to-black/70 p-6 no-underline outline-none focus:shadow-md text-white" style={{backgroundImage: 'url(/src/assets/salon-interior-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                        <div className="mb-2 mt-4 text-lg font-medium">
+                       <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-black/60 to-black/80 p-6 no-underline outline-none focus:shadow-md text-white relative overflow-hidden" style={{backgroundImage: 'url(/src/assets/salon-interior-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                        <div className="mb-2 mt-4 text-lg font-medium text-white relative z-10">
                           All Services
                         </div>
-                        <p className="text-sm leading-tight text-muted-foreground">
+                        <p className="text-sm leading-tight text-white/90 relative z-10">
                           Explore our complete range of beauty and wellness treatments
                         </p>
                       </Link>
