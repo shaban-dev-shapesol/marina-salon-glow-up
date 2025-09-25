@@ -1,4 +1,5 @@
 import { Heart, Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -12,8 +13,14 @@ export const Footer = () => {
               Professional hair, beauty, and wellness services in the heart of Manchester.
             </p>
             <div className="flex space-x-4">
-              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" />
-              <Facebook className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" />
+              <Instagram 
+                className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" 
+                onClick={() => window.open('https://instagram.com/marinasalon', '_blank')}
+              />
+              <Facebook 
+                className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" 
+                onClick={() => window.open('https://facebook.com/marinasalon', '_blank')}
+              />
             </div>
           </div>
 
@@ -21,11 +28,11 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li>Hair Styling & Coloring</li>
-              <li>Nail Care & Art</li>
-              <li>Facial Treatments</li>
-              <li>Beauty & Aesthetics</li>
-              <li>Massage Therapy</li>
+              <li><Link to="/services/hair" className="hover:text-primary transition-colors cursor-pointer">Hair Styling & Coloring</Link></li>
+              <li><Link to="/services/nails" className="hover:text-primary transition-colors cursor-pointer">Nail Care & Art</Link></li>
+              <li><Link to="/services/facial" className="hover:text-primary transition-colors cursor-pointer">Facial Treatments</Link></li>
+              <li><Link to="/services/aesthetics" className="hover:text-primary transition-colors cursor-pointer">Beauty & Aesthetics</Link></li>
+              <li><Link to="/services/massages" className="hover:text-primary transition-colors cursor-pointer">Massage Therapy</Link></li>
             </ul>
           </div>
 
@@ -33,15 +40,24 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-sm opacity-90">
-              <div className="flex items-center space-x-2">
+              <div 
+                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
+                onClick={() => window.open('https://maps.google.com/?q=3-5+Keepers+Quay,+Manchester', '_blank')}
+              >
                 <MapPin className="h-4 w-4" />
                 <span>3-5 Keepers Quay, Manchester</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div 
+                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
+                onClick={() => window.open('tel:01611234567')}
+              >
                 <Phone className="h-4 w-4" />
                 <span>0161 123 4567</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div 
+                className="flex items-center space-x-2 hover:text-primary transition-colors cursor-pointer"
+                onClick={() => window.open('mailto:info@marinasalonbyfkz.co.uk')}
+              >
                 <Mail className="h-4 w-4" />
                 <span>info@marinasalonbyfkz.co.uk</span>
               </div>

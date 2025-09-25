@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/luxury-salon-hero.jpg";
 export const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -30,12 +31,24 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="default" size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg">
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
+              onClick={() => window.open('tel:01611234567')}
+            >
               Book Your Glow-Up
               <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg">
-              Explore Services
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg"
+              asChild
+            >
+              <Link to="/services">
+                Explore Services
+              </Link>
             </Button>
           </div>
 

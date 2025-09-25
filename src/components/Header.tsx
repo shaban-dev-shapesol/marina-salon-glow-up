@@ -143,7 +143,11 @@ export const Header = () => {
               <span>Manchester</span>
             </div>
           </div>
-          <Button variant="luxury" size="sm">
+          <Button 
+            variant="luxury" 
+            size="sm"
+            onClick={() => window.open('tel:01611234567')}
+          >
             Book Appointment
           </Button>
           <Button variant="ghost" size="sm" className="md:hidden">
