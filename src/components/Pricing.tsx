@@ -4,6 +4,8 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, Star, Crown, Sparkles } from "lucide-react";
 
 export const Pricing = () => {
+  useScrollAnimation();
+
   const hairServices = [
     { name: "Cut & Blow Dry", price: "£45-65", description: "Professional styling with premium products" },
     { name: "Color & Highlights", price: "£85-150", description: "Full color transformation with expert color matching" },
@@ -74,9 +76,6 @@ export const Pricing = () => {
       ]
     }
   ];
-
-export const Pricing = () => {
-  useScrollAnimation();
 
   return (
     <section id="pricing" className="py-20 bg-accent/20">
