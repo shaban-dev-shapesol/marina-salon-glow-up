@@ -2,8 +2,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check, Star, Crown, Sparkles } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const PackagesPage = () => {
+  useScrollAnimation();
+  
   const packages = [
     {
       name: "Classic Beauty",
@@ -64,7 +67,7 @@ const PackagesPage = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center animate-on-scroll">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Beauty <span className="luxury-gradient">Packages</span>
               </h1>
@@ -92,7 +95,7 @@ const PackagesPage = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
+              <div className="text-center mb-16 animate-on-scroll">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   Choose Your <span className="luxury-gradient">Experience</span>
                 </h2>
@@ -106,7 +109,7 @@ const PackagesPage = () => {
                 {packages.map((pkg, index) => (
                   <div
                     key={index}
-                    className={`relative p-8 rounded-xl shadow-elegant transition-all duration-300 hover:shadow-luxury ${
+                    className={`relative p-8 rounded-xl shadow-elegant transition-all duration-300 hover:shadow-luxury animate-on-scroll hover-scale ${
                       pkg.popular
                         ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20 scale-105"
                         : "bg-card border border-border"
@@ -164,13 +167,13 @@ const PackagesPage = () => {
         {/* Benefits Section */}
         <section className="py-20 bg-accent/20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center animate-on-scroll">
               <h2 className="text-4xl font-bold mb-8">
                 Why Choose Our <span className="luxury-gradient">Packages?</span>
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="text-center animate-on-scroll">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center hover-scale">
                     <Crown className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Premium Value</h3>
@@ -178,8 +181,8 @@ const PackagesPage = () => {
                     Save significantly compared to booking individual services
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="text-center animate-on-scroll">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center hover-scale">
                     <Sparkles className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Complete Experience</h3>
@@ -187,8 +190,8 @@ const PackagesPage = () => {
                     Carefully curated services for a cohesive beauty transformation
                   </p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="text-center animate-on-scroll">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center hover-scale">
                     <Star className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Expert Care</h3>
@@ -204,7 +207,7 @@ const PackagesPage = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center animate-on-scroll">
               <h2 className="text-4xl font-bold mb-6">
                 Ready to <span className="luxury-gradient">Transform?</span>
               </h2>
