@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import hairService from "@/assets/hair-service.jpg";
@@ -138,6 +139,8 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <Header />
@@ -145,7 +148,7 @@ const ServicesPage = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-background to-accent/20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-on-scroll">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Our <span className="luxury-gradient">Premium</span> Services
               </h1>
@@ -164,14 +167,14 @@ const ServicesPage = () => {
               {services.map((service) => {
                 const Icon = service.icon;
                 return (
-                  <Card key={service.id} className="overflow-hidden hover:shadow-elegant transition-all duration-300">
+                  <Card key={service.id} className="overflow-hidden hover:shadow-elegant transition-all duration-500 hover-lift animate-on-scroll" style={{ animationDelay: `${services.indexOf(service) * 0.1}s` }}>
                     <div className="flex flex-col md:flex-row">
                       <div className="md:w-1/3">
                         <div className="relative h-48 md:h-full">
                           <img 
                             src={service.image}
                             alt={service.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
                           <div className="absolute top-4 left-4">
@@ -216,12 +219,12 @@ const ServicesPage = () => {
                             )}
                           </div>
                           <div className="flex gap-3">
-                            <Button asChild variant="luxury" className="flex-1">
+                            <Button asChild variant="luxury" className="flex-1 hover-scale">
                               <Link to={`/services/${service.id}`}>
                                 View Details
                               </Link>
                             </Button>
-                            <Button variant="elegant" className="flex-1" asChild>
+                            <Button variant="elegant" className="flex-1 hover-glow" asChild>
                               <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                                 Book Now
                               </a>
@@ -239,19 +242,19 @@ const ServicesPage = () => {
 
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/10">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 text-center animate-on-scroll">
             <h2 className="text-3xl font-bold mb-4">Ready to Book Your Appointment?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Transform your look and feel your best with our professional beauty services. 
               Contact us today to schedule your appointment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="luxury" asChild>
+              <Button size="lg" variant="luxury" className="hover-lift hover-glow" asChild>
                 <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                   Book Appointment
                 </a>
               </Button>
-              <Button size="lg" variant="elegant" asChild>
+              <Button size="lg" variant="elegant" className="hover-scale" asChild>
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

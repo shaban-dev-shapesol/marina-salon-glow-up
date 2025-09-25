@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { HelpCircle } from "lucide-react";
 
 const faqs = [
@@ -42,10 +43,12 @@ const faqs = [
 ];
 
 export const FAQ = () => {
+  useScrollAnimation();
+
   return (
     <section id="faq" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <HelpCircle className="h-8 w-8 text-primary" />
             <h2 className="text-4xl md:text-5xl font-bold">Frequently Asked Questions</h2>
@@ -55,13 +58,14 @@ export const FAQ = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-on-scroll animate-on-scroll-delay">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-card rounded-lg border border-border/50 shadow-soft overflow-hidden"
+                className="bg-card rounded-lg border border-border/50 shadow-soft overflow-hidden hover-lift transition-all duration-500"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold hover:text-primary transition-colors hover:no-underline">
                   {faq.question}
@@ -74,20 +78,20 @@ export const FAQ = () => {
           </Accordion>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 animate-on-scroll animate-on-scroll-delay-2">
           <p className="text-lg text-muted-foreground mb-4">
             Still have questions? We're here to help!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+441234567890" 
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors hover-lift"
             >
               Call Us: (0161) 123-4567
             </a>
             <a 
               href="mailto:info@marinasalon.com" 
-              className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-colors hover-scale"
             >
               Email Us
             </a>

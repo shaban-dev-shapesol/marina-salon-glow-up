@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Check, Star, Crown, Sparkles } from "lucide-react";
 
 export const Pricing = () => {
@@ -74,12 +75,15 @@ export const Pricing = () => {
     }
   ];
 
+export const Pricing = () => {
+  useScrollAnimation();
+
   return (
     <section id="pricing" className="py-20 bg-accent/20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Service <span className="luxury-gradient">Pricing</span>
             </h2>
@@ -93,11 +97,12 @@ export const Pricing = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`relative p-8 rounded-xl shadow-elegant transition-all duration-300 hover:shadow-luxury ${
+                className={`relative p-8 rounded-xl shadow-elegant transition-all duration-500 hover:shadow-luxury hover-lift animate-on-scroll ${
                   pkg.popular
                     ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20 scale-105"
                     : "bg-card border border-border"
                 }`}
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -129,7 +134,7 @@ export const Pricing = () => {
 
                 <Button 
                   variant={pkg.popular ? "book" : "elegant"} 
-                  className="w-full"
+                  className="w-full hover-glow"
                   asChild
                 >
                   <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
@@ -143,7 +148,7 @@ export const Pricing = () => {
           {/* Individual Services */}
           <div className="grid md:grid-cols-3 gap-8">
             {/* Hair Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft">
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll">
               <h3 className="text-2xl font-bold mb-6 text-center">Hair Services</h3>
               <div className="space-y-4">
                 {hairServices.map((service, index) => (
@@ -159,7 +164,7 @@ export const Pricing = () => {
             </div>
 
             {/* Beauty Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft">
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay">
               <h3 className="text-2xl font-bold mb-6 text-center">Beauty & Facial</h3>
               <div className="space-y-4">
                 {beautyServices.map((service, index) => (
@@ -175,7 +180,7 @@ export const Pricing = () => {
             </div>
 
             {/* Nail Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft">
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay-2">
               <h3 className="text-2xl font-bold mb-6 text-center">Nail Care</h3>
               <div className="space-y-4">
                 {nailServices.map((service, index) => (
@@ -192,11 +197,11 @@ export const Pricing = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 animate-on-scroll animate-on-scroll-delay-3">
             <p className="text-muted-foreground mb-6">
               All prices are starting from and may vary based on consultation. Book your appointment for a personalized quote.
             </p>
-            <Button variant="book" size="lg" asChild>
+            <Button variant="book" size="lg" className="hover-lift hover-glow" asChild>
               <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                 Schedule Consultation
               </a>

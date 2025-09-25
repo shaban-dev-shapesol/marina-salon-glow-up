@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star, ArrowLeft } from "lucide-react";
 import hairService from "@/assets/hair-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
@@ -196,6 +197,8 @@ const serviceData = {
 const ServiceDetailPage = () => {
   const { serviceId } = useParams();
   const service = serviceData[serviceId as keyof typeof serviceData];
+  
+  useScrollAnimation();
 
   if (!service) {
     return (
@@ -227,7 +230,7 @@ const ServiceDetailPage = () => {
             </Button>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="animate-on-scroll">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 rounded-full bg-primary/10">
                     <Icon className="h-8 w-8 text-primary" />
@@ -253,23 +256,23 @@ const ServiceDetailPage = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button size="lg" variant="luxury" asChild>
+                  <Button size="lg" variant="luxury" className="hover-lift hover-glow" asChild>
                     <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                       Book Appointment
                     </a>
                   </Button>
-                  <Button size="lg" variant="elegant" asChild>
+                  <Button size="lg" variant="elegant" className="hover-scale" asChild>
                     <Link to="/contact">Ask Questions</Link>
                   </Button>
                 </div>
               </div>
               
-              <div className="relative">
+              <div className="relative animate-on-scroll animate-on-scroll-delay">
                 <div className="relative overflow-hidden rounded-2xl h-96">
                   <img 
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
@@ -281,13 +284,13 @@ const ServiceDetailPage = () => {
         {/* Services List */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center">
+            <h2 className="text-3xl font-bold mb-12 text-center animate-on-scroll">
               Our {service.title} <span className="luxury-gradient">Treatments</span>
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {service.services.map((treatment, index) => (
-                <Card key={index} className="hover:shadow-elegant transition-all duration-300 border-border/50">
+                <Card key={index} className="hover:shadow-elegant transition-all duration-500 border-border/50 hover-lift animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
                       <CardTitle className="text-lg">{treatment.name}</CardTitle>
@@ -303,7 +306,7 @@ const ServiceDetailPage = () => {
                         <Clock className="h-3 w-3" />
                         <span>{treatment.duration}</span>
                       </div>
-                      <Button size="sm" variant="elegant" asChild>
+                      <Button size="sm" variant="elegant" className="hover-scale" asChild>
                         <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                           Book Now
                         </a>
@@ -319,13 +322,13 @@ const ServiceDetailPage = () => {
         {/* Benefits Section */}
         <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/10">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto animate-on-scroll">
               <h2 className="text-3xl font-bold mb-8 text-center">
                 Why Choose Our {service.title}?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {service.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                  <div key={index} className="flex items-center gap-3 animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
                     <span className="text-lg">{benefit}</span>
                   </div>
@@ -337,19 +340,19 @@ const ServiceDetailPage = () => {
 
         {/* CTA Section */}
         <section className="py-16">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 text-center animate-on-scroll">
             <h2 className="text-3xl font-bold mb-4">Ready to Book Your {service.title}?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Experience the luxury and expertise of Marina Salon. Book your appointment today 
               and let us help you look and feel your absolute best.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="luxury" asChild>
+              <Button size="lg" variant="luxury" className="hover-lift hover-glow" asChild>
                 <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                   Book Appointment
                 </a>
               </Button>
-              <Button size="lg" variant="elegant" asChild>
+              <Button size="lg" variant="elegant" className="hover-scale" asChild>
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>

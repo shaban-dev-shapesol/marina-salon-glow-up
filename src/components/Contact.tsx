@@ -1,12 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
 
 export const Contact = () => {
+  useScrollAnimation();
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-accent/20 to-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Visit <span className="luxury-gradient">Marina Salon</span>
           </h2>
@@ -17,8 +20,8 @@ export const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="glass-effect border-border/50">
+          <div className="space-y-8 animate-on-scroll">
+            <Card className="glass-effect border-border/50 hover-lift transition-all duration-500">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <MapPin className="h-6 w-6 text-primary" />
@@ -31,13 +34,13 @@ export const Contact = () => {
                   Manchester, UK<br />
                   M3 5FE
                 </p>
-                <Button variant="elegant" className="mt-4">
+                <Button variant="elegant" className="mt-4 hover-scale">
                   Get Directions
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="glass-effect border-border/50">
+            <Card className="glass-effect border-border/50 hover-lift transition-all duration-500">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Clock className="h-6 w-6 text-primary" />
@@ -62,7 +65,7 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-effect border-border/50">
+            <Card className="glass-effect border-border/50 hover-lift transition-all duration-500">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
                   <Phone className="h-6 w-6 text-primary" />
@@ -79,10 +82,10 @@ export const Contact = () => {
                   <span>info@marinasalonbyfkz.co.uk</span>
                 </div>
                 <div className="flex space-x-4 pt-4">
-                  <Button variant="ghost" size="sm">
+                  <Button variant="ghost" size="sm" className="hover-scale">
                     <Instagram className="h-5 w-5" />
                   </Button>
-                  <Button variant="ghost" size="sm">
+                  <Button variant="ghost" size="sm" className="hover-scale">
                     <Facebook className="h-5 w-5" />
                   </Button>
                 </div>
@@ -91,8 +94,8 @@ export const Contact = () => {
           </div>
 
           {/* Booking CTA */}
-          <div className="flex flex-col justify-center">
-            <Card className="glass-effect border-primary/20 p-8 text-center">
+          <div className="flex flex-col justify-center animate-on-scroll animate-on-scroll-delay">
+            <Card className="glass-effect border-primary/20 p-8 text-center hover-lift transition-all duration-500">
               <div className="space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-bold luxury-gradient">
@@ -106,7 +109,7 @@ export const Contact = () => {
                 <div className="space-y-4">
                   <Button 
                     variant="book" 
-                    className="w-full text-lg py-8"
+                    className="w-full text-lg py-8 hover-glow"
                     onClick={() => window.open('https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722', '_blank')}
                   >
                     Book Online Now

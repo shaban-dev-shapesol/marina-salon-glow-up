@@ -5,9 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Twitter } from "lucide-react";
 
 const ContactPage = () => {
+  useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-gradient-subtle">
       <Header />
@@ -15,7 +18,7 @@ const ContactPage = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-background to-accent/20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-on-scroll">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Get in <span className="luxury-gradient">Touch</span>
               </h1>
@@ -32,10 +35,10 @@ const ContactPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
-              <div>
+              <div className="animate-on-scroll">
                 <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
                 <div className="space-y-6">
-                  <Card className="border-border/50">
+                  <Card className="border-border/50 hover-lift transition-all duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-full bg-primary/10">
@@ -52,7 +55,7 @@ const ContactPage = () => {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-border/50">
+                  <Card className="border-border/50 hover-lift transition-all duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-full bg-primary/10">
@@ -69,7 +72,7 @@ const ContactPage = () => {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-border/50">
+                  <Card className="border-border/50 hover-lift transition-all duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-full bg-primary/10">
@@ -90,7 +93,7 @@ const ContactPage = () => {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-border/50">
+                  <Card className="border-border/50 hover-lift transition-all duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-full bg-primary/10">
@@ -198,7 +201,7 @@ const ContactPage = () => {
                         />
                       </div>
                       
-                      <Button type="submit" className="w-full" variant="luxury">
+                      <Button type="submit" className="w-full hover-glow" variant="luxury">
                         Send Message
                       </Button>
                     </form>
@@ -212,20 +215,20 @@ const ContactPage = () => {
         {/* Map Section */}
         <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/10">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 animate-on-scroll">
               <h2 className="text-3xl font-bold mb-4">Find Us</h2>
               <p className="text-lg text-muted-foreground">
                 Located in the heart of Manchester, easily accessible by public transport
               </p>
             </div>
-            <Card className="max-w-4xl mx-auto border-border/50">
+            <Card className="max-w-4xl mx-auto border-border/50 hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay">
               <CardContent className="p-0">
                 <div className="bg-muted/30 h-64 flex items-center justify-center rounded-lg">
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                     <p className="text-lg font-semibold">123 Beauty Street</p>
                     <p className="text-muted-foreground">Manchester, M1 2AB</p>
-                    <Button variant="outline" className="mt-4">
+                    <Button variant="outline" className="mt-4 hover-scale">
                       Open in Maps
                     </Button>
                   </div>
