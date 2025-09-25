@@ -1,9 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Star, Award, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { BookingModal } from "./BookingModal";
 import heroImage from "@/assets/luxury-salon-hero.jpg";
 export const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+  return (
+    <>
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Luxury Marina Salon Interior" className="w-full h-full object-cover opacity-90" />
@@ -35,12 +41,10 @@ export const Hero = () => {
               variant="default" 
               size="lg" 
               className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
-              asChild
+              onClick={() => setIsBookingModalOpen(true)}
             >
-              <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
-                Book Your Glow-Up
-                <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
-              </a>
+              Book Your Glow-Up
+              <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
             </Button>
             <Button 
               variant="outline" 
@@ -90,5 +94,12 @@ export const Hero = () => {
     }}>
         <div className="w-6 h-6 bg-primary/30 rounded-full"></div>
       </div>
-    </section>;
+    </section>
+    
+    <BookingModal 
+      isOpen={isBookingModalOpen} 
+      onClose={() => setIsBookingModalOpen(false)} 
+    />
+    </>
+  );
 };
