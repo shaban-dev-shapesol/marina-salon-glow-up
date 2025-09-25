@@ -3,8 +3,11 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 import { Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MobileMenu } from "./MobileMenu";
+import { useState } from "react";
 
 export const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <header className="glass-effect sticky top-0 z-50 w-full border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
