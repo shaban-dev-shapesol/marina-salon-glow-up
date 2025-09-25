@@ -107,7 +107,7 @@ export const Testimonials = () => {
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 fill-primary text-primary" />)}
               </div>
               <span className="text-lg font-semibold">4.9 Average Rating</span>
-              <span className="text-muted-foreground">• 25+ Google Reviews</span>
+              <span className="text-muted-foreground">• 796 Google Reviews</span>
             </div>
             <div className="mt-6">
               <Button variant="outline" className="group hover-scale" onClick={() => window.open('https://www.google.com/maps/place/Marina+Salon+by+FKZ/@53.4834956,-2.2263103,17z/data=!4m15!1m8!3m7!1s0x487bb1a49fc6465d:0xf4cae867d99770d4!2s3-5+Keepers+Quay,+Manchester+M4+6GL,+UK!3b1!8m2!3d53.4834956!4d-2.2237354!16s%2Fg%2F11mcftq033!3m5!1s0x487bb1a94b5a2de7:0xb79bb11bd9cb307c!8m2!3d53.4831995!4d-2.2237837!16s%2Fg%2F11pc635vzt?entry=ttu', '_blank')}>
@@ -196,7 +196,7 @@ export const Testimonials = () => {
                   <span className="font-semibold">Google</span>
                   <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <p className="text-sm text-muted-foreground">4.9 • 25+ reviews</p>
+                <p className="text-sm text-muted-foreground">4.9 • 796 reviews</p>
                 <p className="text-xs text-primary mt-1">Click to view</p>
               </button>
               <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
