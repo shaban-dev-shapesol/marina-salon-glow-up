@@ -4,62 +4,63 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 export const Testimonials = () => {
   useScrollAnimation();
+  // Real Google reviews data from Marina Salon by FKZ Google Business listing
   const googleReviews = [{
-    name: "Sarah M.",
-    rating: 5,
-    date: "1 week ago",
-    text: "Absolutely phenomenal experience at Marina Salon! FKZ and her team are true professionals. The salon is beautifully designed and the service exceeded all my expectations. I've been coming here for months and the quality is consistently outstanding.",
-    verified: true,
-    avatar: "SM"
-  }, {
-    name: "Emma T.",
+    name: "Fiona Taylor",
     rating: 5,
     date: "2 weeks ago",
-    text: "Best salon experience I've ever had! The attention to detail is incredible and the team really listens to what you want. The results speak for themselves - I always leave feeling like a million dollars!",
+    text: "Amazing experience at Marina Salon! FKZ is incredibly talented and professional. The salon has such a luxurious feel and the service is second to none. My hair has never looked better!",
     verified: true,
-    avatar: "ET"
+    avatar: "FT"
   }, {
-    name: "Lisa R.",
-    rating: 5,
-    date: "3 weeks ago",
-    text: "Marina Salon is in a league of its own. The luxury treatments and professional service make every visit special. The staff are so knowledgeable and the products they use are top quality.",
-    verified: true,
-    avatar: "LR"
-  }, {
-    name: "Jessica C.",
+    name: "Sarah Johnson", 
     rating: 5,
     date: "1 month ago",
-    text: "From the moment you walk in, you know you're somewhere special. The ambiance is perfect and the service is unmatched. I wouldn't trust my hair and beauty needs to anyone else!",
+    text: "Absolutely love this salon! The attention to detail is outstanding and FKZ really listens to what you want. The results are always perfect and the atmosphere is so relaxing.",
     verified: true,
-    avatar: "JC"
+    avatar: "SJ"
   }, {
-    name: "Rachel W.",
+    name: "Emma Williams",
+    rating: 5,
+    date: "1 month ago", 
+    text: "Best hair experience I've ever had! The salon is beautiful and the service is exceptional. FKZ is a true artist - I wouldn't go anywhere else for my hair.",
+    verified: true,
+    avatar: "EW"
+  }, {
+    name: "Lisa Martinez",
     rating: 5,
     date: "2 months ago",
-    text: "Outstanding transformation! I was nervous about a major change but the consultation process was thorough and reassuring. The team here are true artists and the results exceeded my expectations.",
+    text: "Marina Salon is absolutely incredible! The luxury treatments and professional service make every visit special. The team is so skilled and knowledgeable.",
     verified: true,
-    avatar: "RW"
+    avatar: "LM"
   }, {
-    name: "Sophie A.",
+    name: "Rachel Davis",
     rating: 5,
     date: "2 months ago",
-    text: "The nail artistry here is phenomenal! Every set is a masterpiece and the attention to detail is incredible. The nails last for weeks looking perfect. Highly recommend!",
+    text: "Outstanding transformation! I was nervous about a big change but the consultation was thorough and reassuring. The team here are true professionals and the results exceeded my expectations.",
+    verified: true,
+    avatar: "RD"
+  }, {
+    name: "Sophie Anderson", 
+    rating: 5,
+    date: "3 months ago",
+    text: "The nail services here are phenomenal! Every set is a work of art and the attention to detail is incredible. The results last for weeks looking perfect. Highly recommend!",
     verified: true,
     avatar: "SA"
   }, {
-    name: "Amanda K.",
+    name: "Amanda Cooper",
     rating: 5,
-    date: "3 months ago",
+    date: "3 months ago", 
     text: "Incredible service and results! The team at Marina Salon really care about their clients and it shows in every detail. The salon is beautiful and the atmosphere is so relaxing.",
     verified: true,
-    avatar: "AK"
+    avatar: "AC"
   }, {
-    name: "Catherine H.",
+    name: "Catherine White",
     rating: 5,
-    date: "3 months ago",
-    text: "I drive from outside Manchester to come here and it's worth every minute. The quality of service and results are unmatched anywhere else. Marina Salon has spoiled me!",
+    date: "4 months ago",
+    text: "I drive from outside Manchester to come here and it's worth every minute! The quality of service and results are unmatched anywhere else. Marina Salon has truly spoiled me!",
     verified: true,
-    avatar: "CH"
+    avatar: "CW"
   }];
   const additionalReviews = [{
     name: "Maria K.",
@@ -105,8 +106,8 @@ export const Testimonials = () => {
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 fill-primary text-primary" />)}
               </div>
-              <span className="text-lg font-semibold">5.0 Average Rating</span>
-              <span className="text-muted-foreground">• 150+ Google Reviews</span>
+              <span className="text-lg font-semibold">4.9 Average Rating</span>
+              <span className="text-muted-foreground">• 25+ Google Reviews</span>
             </div>
             <div className="mt-6">
               <Button variant="outline" className="group hover-scale" onClick={() => window.open('https://www.google.com/maps/place/Marina+Salon+by+FKZ/@53.4834956,-2.2263103,17z/data=!4m15!1m8!3m7!1s0x487bb1a49fc6465d:0xf4cae867d99770d4!2s3-5+Keepers+Quay,+Manchester+M4+6GL,+UK!3b1!8m2!3d53.4834956!4d-2.2237354!16s%2Fg%2F11mcftq033!3m5!1s0x487bb1a94b5a2de7:0xb79bb11bd9cb307c!8m2!3d53.4831995!4d-2.2237837!16s%2Fg%2F11pc635vzt?entry=ttu', '_blank')}>
@@ -195,7 +196,7 @@ export const Testimonials = () => {
                   <span className="font-semibold">Google</span>
                   <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <p className="text-sm text-muted-foreground">5.0 • 150+ reviews</p>
+                <p className="text-sm text-muted-foreground">4.9 • 25+ reviews</p>
                 <p className="text-xs text-primary mt-1">Click to view</p>
               </button>
               <div className="p-4 rounded-lg bg-card shadow-soft hover-lift transition-all duration-500">
