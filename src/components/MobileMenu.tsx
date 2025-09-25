@@ -84,6 +84,14 @@ export const MobileMenu = () => {
             </Collapsible>
 
             <Link
+              to="/packages"
+              className="block py-2 text-base font-medium hover:text-primary transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Packages
+            </Link>
+
+            <Link
               to="/contact"
               className="block py-2 text-base font-medium hover:text-primary transition-colors"
               onClick={() => setOpen(false)}
