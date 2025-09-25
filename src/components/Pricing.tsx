@@ -7,72 +7,70 @@ export const Pricing = () => {
   useScrollAnimation();
 
   const hairServices = [
-    { name: "Cut & Blow Dry", price: "£45-65", description: "Professional styling with premium products" },
-    { name: "Color & Highlights", price: "£85-150", description: "Full color transformation with expert color matching" },
-    { name: "Balayage/Ombre", price: "£120-200", description: "Hand-painted color for natural dimension" },
-    { name: "Hair Treatment", price: "£35-55", description: "Deep conditioning and repair treatments" },
-    { name: "Wedding Hair", price: "£150-250", description: "Complete bridal styling package" },
-    { name: "Extensions", price: "£200-400", description: "Premium hair extensions and application" }
+    { name: "Men's Haircut", price: "£39", description: "Professional styling for men" },
+    { name: "Restyle Cut & Blow Dry", price: "£70-80", description: "Complete restyle with professional blow dry" },
+    { name: "Trim Cut & Blow Dry", price: "£50-70", description: "Fresh trim with straight or curly blow dry" },
+    { name: "Children's Haircut", price: "£30-35", description: "Kids haircuts aged 2-12 years" },
+    { name: "Hair Extensions", price: "£100-150", description: "Professional hair extensions application" },
+    { name: "Dry Hair Cut", price: "£45", description: "Quick trim without wash (up to 1 inch)" }
   ];
 
   const beautyServices = [
-    { name: "Classic Facial", price: "£60-80", description: "Deep cleansing and rejuvenating treatment" },
-    { name: "Anti-Aging Facial", price: "£85-120", description: "Advanced skincare with luxury products" },
-    { name: "Chemical Peel", price: "£100-150", description: "Professional skin resurfacing treatment" },
-    { name: "Microdermabrasion", price: "£75-95", description: "Exfoliating treatment for smooth skin" },
-    { name: "Eye Treatment", price: "£45-65", description: "Specialized care for delicate eye area" },
-    { name: "Full Facial Package", price: "£150-200", description: "Complete skincare experience" }
+    { name: "Full Head Colour", price: "£95-160", description: "Complete hair color transformation" },
+    { name: "Half Head Highlights", price: "£100", description: "Partial highlighting without toner" },
+    { name: "Full Head Highlights", price: "£150", description: "Complete highlighting service" },
+    { name: "Ombre/Balayage", price: "£160", description: "Hand-painted color technique" },
+    { name: "Halo/Money Piece", price: "£40", description: "Face-framing highlights" },
+    { name: "Colour Correction", price: "£130", description: "Professional color correction service" }
   ];
 
   const nailServices = [
-    { name: "Classic Manicure", price: "£25-35", description: "Traditional nail care and polish" },
-    { name: "Gel Manicure", price: "£35-45", description: "Long-lasting gel polish application" },
-    { name: "Pedicure", price: "£35-50", description: "Complete foot care and styling" },
-    { name: "Nail Art", price: "£15-30", description: "Custom designs and decorative elements" },
-    { name: "Acrylic/Extensions", price: "£45-65", description: "Professional nail extensions" },
-    { name: "Luxury Spa Package", price: "£80-120", description: "Premium hand and foot treatment" }
+    { name: "Express Manicure", price: "£20", description: "Quick nail refresh without polish" },
+    { name: "Lux Manicure", price: "£35-40", description: "Luxury manicure with optional shellac" },
+    { name: "Gel Polish Hands", price: "£27-35", description: "Long-lasting shellac application" },
+    { name: "Express Pedicure", price: "£30", description: "Quick pedicure for busy schedules" },
+    { name: "Lux Pedicure", price: "£50-55", description: "Luxury pedicure with optional shellac" },
+    { name: "BIAB Extensions", price: "£40-45", description: "Builder gel nail extensions" }
   ];
 
   const packages = [
     {
-      name: "Classic Beauty",
-      price: "£180",
-      originalPrice: "£220",
+      name: "4 Blow Dries",
+      price: "£135",
+      originalPrice: "£175",
       icon: <Sparkles className="h-6 w-6" />,
       popular: false,
       services: [
-        "Professional haircut & style",
-        "Classic manicure",
-        "Express facial treatment",
-        "Complimentary refreshments"
+        "4 luxurious blow dries",
+        "Monday-Thursday 10-4pm",
+        "Perfect for monthly maintenance",
+        "Save £40 on regular pricing"
       ]
     },
     {
-      name: "Luxury Experience",
-      price: "£320",
-      originalPrice: "£380",
+      name: "Party Glam Package",
+      price: "£120",
+      originalPrice: "£140",
       icon: <Crown className="h-6 w-6" />,
       popular: true,
       services: [
-        "Cut, color & professional styling",
-        "Premium facial treatment",
-        "Gel manicure & pedicure",
-        "Champagne & luxury amenities",
-        "Personal consultation"
+        "Party glam makeup with lashes",
+        "Kérastase hair treatment",
+        "Special occasion hair styling",
+        "Perfect for Christmas parties"
       ]
     },
     {
-      name: "Bridal Package",
-      price: "£450",
-      originalPrice: "£520",
+      name: "Full Head Colour Package",
+      price: "£185",
+      originalPrice: "£235",
       icon: <Star className="h-6 w-6" />,
       popular: false,
       services: [
-        "Wedding hair styling",
-        "Professional makeup",
-        "Luxury facial (1 week before)",
-        "Manicure & pedicure",
-        "Trial session included"
+        "Full head colour",
+        "Trim cut & curly blow dry",
+        "Free Kérastase treatment (worth £50)",
+        "Complete transformation"
       ]
     }
   ];

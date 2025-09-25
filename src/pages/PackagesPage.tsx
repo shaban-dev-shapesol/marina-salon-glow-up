@@ -9,54 +9,52 @@ const PackagesPage = () => {
   
   const packages = [
     {
-      name: "Classic Beauty",
-      price: "£180",
-      originalPrice: "£220",
+      name: "4 Blow Dries",
+      price: "£135",
+      originalPrice: "£175",
       icon: <Sparkles className="h-6 w-6" />,
       popular: false,
-      description: "Perfect for those new to luxury beauty treatments",
+      description: "Perfect for maintaining your style throughout the month",
       services: [
-        "Professional haircut & style",
-        "Classic manicure",
-        "Express facial treatment",
-        "Complimentary refreshments"
+        "4 luxurious blow dries",
+        "Monday-Thursday 10-4pm only",
+        "Flawless hair maintenance",
+        "Monthly styling package"
       ],
-      duration: "3 hours",
+      duration: "1 month",
       savings: "£40"
     },
     {
-      name: "Luxury Experience",
-      price: "£320",
-      originalPrice: "£380",
+      name: "Party Glam Package",
+      price: "£120",
+      originalPrice: "£140",
       icon: <Crown className="h-6 w-6" />,
       popular: true,
-      description: "Our most popular comprehensive beauty package",
+      description: "Perfect for Christmas parties and special occasions",
       services: [
-        "Cut, color & professional styling",
-        "Premium facial treatment",
-        "Gel manicure & pedicure",
-        "Champagne & luxury amenities",
-        "Personal consultation"
+        "Party glam makeup with lashes",
+        "Kérastase hair treatment & mask",
+        "Wash and blow dry with styling",
+        "Special occasion hair style"
       ],
-      duration: "5 hours",
-      savings: "£60"
+      duration: "4 hours",
+      savings: "£20"
     },
     {
-      name: "Bridal Package",
-      price: "£450",
-      originalPrice: "£520",
+      name: "Lymphatic Drainage Spa",
+      price: "£100",
+      originalPrice: "£120",
       icon: <Star className="h-6 w-6" />,
       popular: false,
-      description: "Complete bridal beauty package for your special day",
+      description: "Relaxing massage package with spa facial",
       services: [
-        "Wedding hair styling",
-        "Professional makeup",
-        "Luxury facial (1 week before)",
-        "Manicure & pedicure",
-        "Trial session included"
+        "Lymphatic drainage massage",
+        "Foot massage (30 mins)",
+        "Smooth & glow facial",
+        "Complete wellness experience"
       ],
-      duration: "Full day",
-      savings: "£70"
+      duration: "3.5 hours",
+      savings: "£20"
     }
   ];
 
