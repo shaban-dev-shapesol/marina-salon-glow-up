@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap } from "lucide-react";
 import hairService from "@/assets/hair-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
@@ -126,8 +127,10 @@ export const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="elegant" className="w-full">
-                    Learn More
+                  <Button variant="elegant" className="w-full" asChild>
+                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>
+                      Learn More
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -136,8 +139,10 @@ export const Services = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="luxury" size="lg">
-            View All Services & Pricing
+          <Button variant="luxury" size="lg" asChild>
+            <Link to="/services">
+              View All Services & Pricing
+            </Link>
           </Button>
         </div>
       </div>

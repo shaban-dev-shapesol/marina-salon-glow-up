@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Check, Star, Crown, Sparkles } from "lucide-react";
 
 export const Pricing = () => {
@@ -129,8 +130,11 @@ export const Pricing = () => {
                 <Button 
                   variant={pkg.popular ? "book" : "elegant"} 
                   className="w-full"
+                  asChild
                 >
-                  Book Package
+                  <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+                    Book Package
+                  </a>
                 </Button>
               </div>
             ))}
@@ -192,8 +196,10 @@ export const Pricing = () => {
             <p className="text-muted-foreground mb-6">
               All prices are starting from and may vary based on consultation. Book your appointment for a personalized quote.
             </p>
-            <Button variant="book" size="lg">
-              Schedule Consultation
+            <Button variant="book" size="lg" asChild>
+              <Link to="/contact">
+                Schedule Consultation
+              </Link>
             </Button>
           </div>
         </div>

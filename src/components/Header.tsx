@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <header className="glass-effect sticky top-0 z-50 w-full border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold luxury-gradient">
+        <Link to="/" className="text-2xl font-bold luxury-gradient hover:opacity-80 transition-opacity">
           Marina Salon
-        </div>
+        </Link>
         
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="space-x-6">
@@ -134,21 +134,28 @@ export const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
+            <a href="tel:+123456789" className="flex items-center space-x-1 hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               <span>Book Now</span>
-            </div>
-            <div className="flex items-center space-x-1">
+            </a>
+            <a 
+              href="https://www.google.com/maps/place/Manchester/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 hover:text-primary transition-colors"
+            >
               <MapPin className="h-4 w-4" />
               <span>Manchester</span>
-            </div>
+            </a>
           </div>
           <Button 
             variant="luxury" 
             size="sm"
-            onClick={() => window.open('tel:01611234567')}
+            asChild
           >
-            Book Appointment
+            <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+              Book Appointment
+            </a>
           </Button>
           <Button variant="ghost" size="sm" className="md:hidden">
             <Menu className="h-4 w-4" />
