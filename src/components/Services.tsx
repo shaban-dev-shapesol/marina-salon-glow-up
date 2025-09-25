@@ -17,56 +17,64 @@ const services = [
     title: "Hair Services",
     description: "Expert cuts, coloring, and treatments",
     image: hairService,
-    services: ["Hair Cuts", "Hair Coloring", "Hair Treatments", "Styling"]
+    services: ["Hair Cuts", "Hair Coloring", "Hair Treatments", "Styling"],
+    link: "/services/hair"
   },
   {
     icon: Hand,
     title: "Nails & Beauty",
     description: "Professional nail care and art",
     image: nailService,
-    services: ["Manicures", "Pedicures", "Nail Art", "Gel Polish"]
+    services: ["Manicures", "Pedicures", "Nail Art", "Gel Polish"],
+    link: "/services/nails"
   },
   {
     icon: Sparkles,
     title: "Facial Treatments",
     description: "Rejuvenating skincare services",
     image: facialService,
-    services: ["Deep Cleansing", "Anti-Aging", "Hydrating", "Brightening"]
+    services: ["Deep Cleansing", "Anti-Aging", "Hydrating", "Brightening"],
+    link: "/services/facial"
   },
   {
     icon: Eye,
     title: "Eyes & Brows",
     description: "Perfect your look with expert eye treatments",
     image: eyesBrowsService,
-    services: ["Eyebrow Shaping", "Lash Extensions", "Tinting", "Threading"]
+    services: ["Eyebrow Shaping", "Lash Extensions", "Tinting", "Threading"],
+    link: "/services/eyes-brows"
   },
   {
     icon: Palette,
     title: "Make-up",
     description: "Professional makeup for any occasion",
     image: makeupService,
-    services: ["Special Events", "Bridal", "Photoshoots", "Lessons"]
+    services: ["Special Events", "Bridal", "Photoshoots", "Lessons"],
+    link: "/services/makeup"
   },
   {
     icon: Heart,
     title: "Massages",
     description: "Relaxing therapeutic treatments",
     image: massageService,
-    services: ["Swedish", "Deep Tissue", "Hot Stone", "Aromatherapy"]
+    services: ["Swedish", "Deep Tissue", "Hot Stone", "Aromatherapy"],
+    link: "/services/massages"
   },
   {
     icon: Zap,
     title: "Aesthetics",
     description: "Advanced beauty treatments",
     image: aestheticsService,
-    services: ["Botox", "Fillers", "Chemical Peels", "Microneedling"]
+    services: ["Botox", "Fillers", "Chemical Peels", "Microneedling"],
+    link: "/services/aesthetics"
   },
   {
     icon: Flower,
     title: "Waxing",
     description: "Professional hair removal services",
     image: waxingService,
-    services: ["Full Body", "Brazilian", "Eyebrow", "Upper Lip"]
+    services: ["Full Body", "Brazilian", "Eyebrow", "Upper Lip"],
+    link: "/services/waxing"
   }
 ];
 
@@ -128,7 +136,7 @@ export const Services = () => {
                     ))}
                   </ul>
                   <Button variant="elegant" className="w-full" asChild>
-                    <Link to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}>
+                    <Link to={service.link}>
                       Learn More
                     </Link>
                   </Button>
