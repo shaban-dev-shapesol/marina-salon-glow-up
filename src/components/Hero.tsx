@@ -21,7 +21,7 @@ export const Hero = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Transform Your
-            <span className="block luxury-gradient">Beauty Journey</span>
+            <span className="block luxury-gradient py-[8px]">Beauty Journey</span>
             <span className="block">with Marina Salon</span>
           </h1>
 
