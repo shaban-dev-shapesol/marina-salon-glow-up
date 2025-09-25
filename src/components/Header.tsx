@@ -43,30 +43,40 @@ export const Header = () => {
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/hair" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Hair Services</div>
+                      <Link to="/services/hair-colouring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Hair Colouring</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Cuts, coloring, and treatments
+                          Expert coloring techniques
                         </p>
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/nails" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Nails & Beauty</div>
+                      <Link to="/services/haircuts" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Haircuts</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Professional nail care
+                          Precision styling
                         </p>
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/facial" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Facial Treatments</div>
+                      <Link to="/services/hair-treatment" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Hair Treatment</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Rejuvenating skincare
+                          Nourishing treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/aesthetics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Aesthetics</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Advanced treatments
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -77,6 +87,26 @@ export const Header = () => {
                         <div className="text-sm font-medium leading-none">Eyes & Brows</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Expert eye treatments
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/nails" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Nails</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professional nail care
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link to="/services/facials" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Facials</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Rejuvenating skincare
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -103,20 +133,20 @@ export const Header = () => {
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/aesthetics" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Aesthetics</div>
+                      <Link to="/services/waxing" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Waxing</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Advanced treatments
+                          Hair removal services
                         </p>
                       </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/waxing" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <div className="text-sm font-medium leading-none">Waxing</div>
+                      <Link to="/services/threading" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Threading</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Hair removal services
+                          Precise hair removal
                         </p>
                       </Link>
                     </NavigationMenuLink>

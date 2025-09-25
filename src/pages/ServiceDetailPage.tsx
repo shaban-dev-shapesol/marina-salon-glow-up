@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star, ArrowLeft } from "lucide-react";
+import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star, ArrowLeft, Brush, Wrench, Wind } from "lucide-react";
 import hairService from "@/assets/hair-service.jpg";
+import haircutsService from "@/assets/haircuts-service.jpg";
+import hairColoringService from "@/assets/hair-coloring-service.jpg";
+import hairTreatmentService from "@/assets/hair-treatment-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
 import facialService from "@/assets/facial-service.jpg";
 import eyesBrowsService from "@/assets/eyes-brows-service.jpg";
@@ -14,33 +17,122 @@ import makeupService from "@/assets/makeup-service.jpg";
 import massageService from "@/assets/massage-service.jpg";
 import aestheticsService from "@/assets/aesthetics-service.jpg";
 import waxingService from "@/assets/waxing-service.jpg";
+import threadingService from "@/assets/threading-service.jpg";
 
 const serviceData = {
-  hair: {
+  "hair-colouring": {
+    icon: Brush,
+    title: "Hair Colouring",
+    description: "Expert hair coloring and creative color techniques using premium products and latest fashion trends.",
+    image: hairColoringService,
+    duration: "90-180 min",
+    startingPrice: "£75",
+    services: [
+      { name: "Full Color", price: "£75", duration: "120 min", description: "Complete hair color transformation" },
+      { name: "Highlights", price: "£85", duration: "150 min", description: "Professional highlighting technique" },
+      { name: "Balayage", price: "£95", duration: "180 min", description: "Hand-painted natural highlights" },
+      { name: "Color Correction", price: "£120", duration: "180 min", description: "Expert color correction and repair" },
+      { name: "Root Touch-up", price: "£45", duration: "90 min", description: "Maintain your color between visits" },
+      { name: "Fashion Colors", price: "£85", duration: "150 min", description: "Bold and creative fashion colors" }
+    ],
+    benefits: [
+      "Premium organic color products",
+      "Expert color consultation",
+      "Color protection aftercare",
+      "Color guarantee included"
+    ]
+  },
+  haircuts: {
     icon: Scissors,
-    title: "Hair Services",
-    description: "Expert cuts, coloring, and treatments by our skilled stylists using premium products and latest techniques.",
-    image: hairService,
-    duration: "60-180 min",
+    title: "Haircuts",
+    description: "Precision cuts tailored to your style and face shape by our expert stylists.",
+    image: haircutsService,
+    duration: "45-90 min",
     startingPrice: "£35",
     services: [
-      { name: "Hair Cut & Blow Dry", price: "£45", duration: "60 min", description: "Professional cut with styling finish" },
-      { name: "Hair Coloring", price: "£75", duration: "120 min", description: "Full head color with premium products" },
-      { name: "Hair Treatments", price: "£35", duration: "45 min", description: "Deep conditioning and repair treatments" },
+      { name: "Cut & Blow Dry", price: "£45", duration: "60 min", description: "Professional cut with styling finish" },
+      { name: "Restyle", price: "£55", duration: "75 min", description: "Complete style transformation" },
+      { name: "Trim", price: "£35", duration: "45 min", description: "Maintain your current style" },
       { name: "Wedding Styling", price: "£85", duration: "90 min", description: "Elegant styling for your special day" },
-      { name: "Highlights", price: "£95", duration: "150 min", description: "Professional highlighting technique" },
-      { name: "Hair Extensions", price: "£150", duration: "180 min", description: "Premium quality extensions application" }
+      { name: "Children's Cut", price: "£25", duration: "30 min", description: "Gentle styling for little ones" },
+      { name: "Fringe Trim", price: "£15", duration: "20 min", description: "Quick fringe maintenance" }
     ],
     benefits: [
       "Expert stylists with 10+ years experience",
-      "Premium organic hair products",
       "Complimentary consultation",
-      "Aftercare advice included"
+      "Styling tips and advice",
+      "Perfect cut guarantee"
+    ]
+  },
+  "hair-treatment": {
+    icon: Star,
+    title: "Hair Treatment",
+    description: "Nourishing treatments for healthy, strong, and beautiful hair using premium products.",
+    image: hairTreatmentService,
+    duration: "30-120 min",
+    startingPrice: "£35",
+    services: [
+      { name: "Keratin Treatment", price: "£85", duration: "120 min", description: "Smooth and frizz-free hair" },
+      { name: "Deep Conditioning", price: "£35", duration: "45 min", description: "Intensive moisture restoration" },
+      { name: "Scalp Treatment", price: "£45", duration: "60 min", description: "Healthy scalp and hair growth" },
+      { name: "Protein Treatment", price: "£50", duration: "60 min", description: "Strengthen damaged hair" },
+      { name: "Olaplex Treatment", price: "£65", duration: "75 min", description: "Bond rebuilding treatment" },
+      { name: "Hair Mask", price: "£30", duration: "30 min", description: "Nourishing hair mask" }
+    ],
+    benefits: [
+      "Premium treatment products",
+      "Customized for your hair type",
+      "Long-lasting results",
+      "Home care recommendations"
+    ]
+  },
+  aesthetics: {
+    icon: Zap,
+    title: "Aesthetics",
+    description: "Advanced cosmetic treatments for enhanced natural beauty by certified professionals.",
+    image: aestheticsService,
+    duration: "30-90 min",
+    startingPrice: "£150",
+    services: [
+      { name: "Botox Treatment", price: "£150", duration: "30 min", description: "Wrinkle reduction treatment" },
+      { name: "Dermal Fillers", price: "£300", duration: "45 min", description: "Volume restoration and enhancement" },
+      { name: "Chemical Peels", price: "£85", duration: "60 min", description: "Skin resurfacing treatment" },
+      { name: "Microneedling", price: "£120", duration: "75 min", description: "Collagen stimulation therapy" },
+      { name: "Laser Hair Removal", price: "£80", duration: "45 min", description: "Permanent hair reduction" },
+      { name: "Skin Rejuvenation", price: "£100", duration: "60 min", description: "Advanced skin renewal treatment" }
+    ],
+    benefits: [
+      "Certified aesthetic practitioners",
+      "FDA-approved treatments",
+      "Free consultation included",
+      "Aftercare support provided"
+    ]
+  },
+  "eyes-brows": {
+    icon: Eye,
+    title: "Eyes & Brows",
+    description: "Perfect your look with expert eye and brow treatments using precision techniques.",
+    image: eyesBrowsService,
+    duration: "20-120 min",
+    startingPrice: "£15",
+    services: [
+      { name: "Eyebrow Shaping", price: "£15", duration: "20 min", description: "Professional eyebrow shaping" },
+      { name: "Lash Extensions", price: "£65", duration: "90 min", description: "Beautiful individual lash extensions" },
+      { name: "Brow & Lash Tinting", price: "£25", duration: "30 min", description: "Color enhancement for brows and lashes" },
+      { name: "Microblading", price: "£200", duration: "120 min", description: "Semi-permanent brow enhancement" },
+      { name: "Lash Lift", price: "£35", duration: "45 min", description: "Natural lash curling treatment" },
+      { name: "Henna Brows", price: "£30", duration: "40 min", description: "Natural henna brow tinting" }
+    ],
+    benefits: [
+      "Precision shaping techniques",
+      "High-quality products",
+      "Patch test included",
+      "Perfect symmetry guaranteed"
     ]
   },
   nails: {
     icon: Hand,
-    title: "Nails & Beauty",
+    title: "Nails",
     description: "Professional nail care and stunning nail art designs using the latest techniques and premium products.",
     image: nailService,
     duration: "30-90 min",
@@ -60,9 +152,9 @@ const serviceData = {
       "Relaxing hand massage included"
     ]
   },
-  facial: {
+  facials: {
     icon: Sparkles,
-    title: "Facial Treatments",
+    title: "Facials",
     description: "Rejuvenating skincare treatments for all skin types using advanced techniques and premium products.",
     image: facialService,
     duration: "45-90 min",
@@ -80,28 +172,6 @@ const serviceData = {
       "Premium skincare products",
       "Relaxing facial massage",
       "Skincare routine advice"
-    ]
-  },
-  "eyes-brows": {
-    icon: Eye,
-    title: "Eyes & Brows",
-    description: "Perfect your look with expert eye and brow treatments using precision techniques.",
-    image: eyesBrowsService,
-    duration: "20-60 min",
-    startingPrice: "£15",
-    services: [
-      { name: "Eyebrow Shaping", price: "£15", duration: "20 min", description: "Professional eyebrow shaping" },
-      { name: "Lash Extensions", price: "£65", duration: "90 min", description: "Beautiful individual lash extensions" },
-      { name: "Brow & Lash Tinting", price: "£25", duration: "30 min", description: "Color enhancement for brows and lashes" },
-      { name: "Threading", price: "£12", duration: "15 min", description: "Precise hair removal technique" },
-      { name: "Lash Lift", price: "£35", duration: "45 min", description: "Natural lash curling treatment" },
-      { name: "Henna Brows", price: "£30", duration: "40 min", description: "Natural henna brow tinting" }
-    ],
-    benefits: [
-      "Precision shaping techniques",
-      "High-quality products",
-      "Patch test included",
-      "Perfect symmetry guaranteed"
     ]
   },
   makeup: {
@@ -148,28 +218,6 @@ const serviceData = {
       "Stress relief guarantee"
     ]
   },
-  aesthetics: {
-    icon: Zap,
-    title: "Aesthetics",
-    description: "Advanced cosmetic treatments for enhanced natural beauty by certified professionals.",
-    image: aestheticsService,
-    duration: "30-90 min",
-    startingPrice: "£150",
-    services: [
-      { name: "Botox Treatment", price: "£150", duration: "30 min", description: "Wrinkle reduction treatment" },
-      { name: "Dermal Fillers", price: "£300", duration: "45 min", description: "Volume restoration and enhancement" },
-      { name: "Chemical Peels", price: "£85", duration: "60 min", description: "Skin resurfacing treatment" },
-      { name: "Microneedling", price: "£120", duration: "75 min", description: "Collagen stimulation therapy" },
-      { name: "Laser Hair Removal", price: "£80", duration: "45 min", description: "Permanent hair reduction" },
-      { name: "Skin Rejuvenation", price: "£100", duration: "60 min", description: "Advanced skin renewal treatment" }
-    ],
-    benefits: [
-      "Certified aesthetic practitioners",
-      "FDA-approved treatments",
-      "Free consultation included",
-      "Aftercare support provided"
-    ]
-  },
   waxing: {
     icon: Flower,
     title: "Waxing",
@@ -190,6 +238,28 @@ const serviceData = {
       "Hygienic single-use products",
       "Experienced technicians",
       "Aftercare products included"
+    ]
+  },
+  threading: {
+    icon: Wind,
+    title: "Threading",
+    description: "Precise hair removal technique using cotton thread for perfect results every time.",
+    image: threadingService,
+    duration: "10-30 min",
+    startingPrice: "£8",
+    services: [
+      { name: "Eyebrow Threading", price: "£12", duration: "15 min", description: "Precise eyebrow shaping with thread" },
+      { name: "Upper Lip Threading", price: "£8", duration: "10 min", description: "Gentle upper lip hair removal" },
+      { name: "Chin Threading", price: "£10", duration: "12 min", description: "Clean chin hair removal" },
+      { name: "Full Face Threading", price: "£25", duration: "30 min", description: "Complete facial hair removal" },
+      { name: "Forehead Threading", price: "£12", duration: "15 min", description: "Forehead hair removal" },
+      { name: "Sideburn Threading", price: "£10", duration: "12 min", description: "Neat sideburn shaping" }
+    ],
+    benefits: [
+      "Precise hair removal technique",
+      "No chemicals or wax",
+      "Perfect for sensitive skin",
+      "Long-lasting results"
     ]
   }
 };

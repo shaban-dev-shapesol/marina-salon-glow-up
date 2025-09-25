@@ -2,8 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap } from "lucide-react";
+import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Brush, Star, Wrench, Wind } from "lucide-react";
 import hairService from "@/assets/hair-service.jpg";
+import haircutsService from "@/assets/haircuts-service.jpg";
+import hairColoringService from "@/assets/hair-coloring-service.jpg";
+import hairTreatmentService from "@/assets/hair-treatment-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
 import facialService from "@/assets/facial-service.jpg";
 import eyesBrowsService from "@/assets/eyes-brows-service.jpg";
@@ -11,19 +14,52 @@ import makeupService from "@/assets/makeup-service.jpg";
 import massageService from "@/assets/massage-service.jpg";
 import aestheticsService from "@/assets/aesthetics-service.jpg";
 import waxingService from "@/assets/waxing-service.jpg";
+import threadingService from "@/assets/threading-service.jpg";
 
 const services = [
   {
+    icon: Brush,
+    title: "Hair Colouring",
+    description: "Expert hair coloring and creative color techniques",
+    image: hairColoringService,
+    services: ["Full Color", "Highlights", "Balayage", "Color Correction"],
+    link: "/services/hair-colouring"
+  },
+  {
     icon: Scissors,
-    title: "Hair Services",
-    description: "Expert cuts, coloring, and treatments",
-    image: hairService,
-    services: ["Hair Cuts", "Hair Coloring", "Hair Treatments", "Styling"],
-    link: "/services/hair"
+    title: "Haircuts",
+    description: "Precision cuts tailored to your style",
+    image: haircutsService,
+    services: ["Cut & Blow Dry", "Restyle", "Trim", "Layers"],
+    link: "/services/haircuts"
+  },
+  {
+    icon: Star,
+    title: "Hair Treatment",
+    description: "Nourishing treatments for healthy hair",
+    image: hairTreatmentService,
+    services: ["Keratin", "Deep Conditioning", "Scalp Treatment", "Protein"],
+    link: "/services/hair-treatment"
+  },
+  {
+    icon: Zap,
+    title: "Aesthetics",
+    description: "Advanced beauty treatments",
+    image: aestheticsService,
+    services: ["Botox", "Fillers", "Chemical Peels", "Microneedling"],
+    link: "/services/aesthetics"
+  },
+  {
+    icon: Eye,
+    title: "Eyes & Brows",
+    description: "Perfect your look with expert eye treatments",
+    image: eyesBrowsService,
+    services: ["Eyebrow Shaping", "Lash Extensions", "Tinting", "Microblading"],
+    link: "/services/eyes-brows"
   },
   {
     icon: Hand,
-    title: "Nails & Beauty",
+    title: "Nails",
     description: "Professional nail care and art",
     image: nailService,
     services: ["Manicures", "Pedicures", "Nail Art", "Gel Polish"],
@@ -31,19 +67,11 @@ const services = [
   },
   {
     icon: Sparkles,
-    title: "Facial Treatments",
-    description: "Rejuvenating skincare services",
+    title: "Facials",
+    description: "Rejuvenating skincare treatments",
     image: facialService,
     services: ["Deep Cleansing", "Anti-Aging", "Hydrating", "Brightening"],
-    link: "/services/facial"
-  },
-  {
-    icon: Eye,
-    title: "Eyes & Brows",
-    description: "Perfect your look with expert eye treatments",
-    image: eyesBrowsService,
-    services: ["Eyebrow Shaping", "Lash Extensions", "Tinting", "Threading"],
-    link: "/services/eyes-brows"
+    link: "/services/facials"
   },
   {
     icon: Palette,
@@ -62,20 +90,20 @@ const services = [
     link: "/services/massages"
   },
   {
-    icon: Zap,
-    title: "Aesthetics",
-    description: "Advanced beauty treatments",
-    image: aestheticsService,
-    services: ["Botox", "Fillers", "Chemical Peels", "Microneedling"],
-    link: "/services/aesthetics"
-  },
-  {
     icon: Flower,
     title: "Waxing",
     description: "Professional hair removal services",
     image: waxingService,
     services: ["Full Body", "Brazilian", "Eyebrow", "Upper Lip"],
     link: "/services/waxing"
+  },
+  {
+    icon: Wind,
+    title: "Threading",
+    description: "Precise hair removal technique",
+    image: threadingService,
+    services: ["Eyebrow Threading", "Upper Lip", "Chin", "Full Face"],
+    link: "/services/threading"
   }
 ];
 
@@ -95,7 +123,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

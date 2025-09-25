@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star } from "lucide-react";
+import { Scissors, Sparkles, Eye, Hand, Flower, Palette, Heart, Zap, Clock, Star, Brush, Wrench, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import hairService from "@/assets/hair-service.jpg";
+import haircutsService from "@/assets/haircuts-service.jpg";
+import hairColoringService from "@/assets/hair-coloring-service.jpg";
+import hairTreatmentService from "@/assets/hair-treatment-service.jpg";
 import nailService from "@/assets/nail-service.jpg";
 import facialService from "@/assets/facial-service.jpg";
 import eyesBrowsService from "@/assets/eyes-brows-service.jpg";
@@ -14,27 +17,88 @@ import makeupService from "@/assets/makeup-service.jpg";
 import massageService from "@/assets/massage-service.jpg";
 import aestheticsService from "@/assets/aesthetics-service.jpg";
 import waxingService from "@/assets/waxing-service.jpg";
+import threadingService from "@/assets/threading-service.jpg";
 
 const services = [
   {
-    id: "hair",
+    id: "hair-colouring",
+    icon: Brush,
+    title: "Hair Colouring",
+    description: "Expert hair coloring and creative color techniques",
+    image: hairColoringService,
+    duration: "90-180 min",
+    startingPrice: "£75",
+    services: [
+      { name: "Full Color", price: "£75", duration: "120 min" },
+      { name: "Highlights", price: "£85", duration: "150 min" },
+      { name: "Balayage", price: "£95", duration: "180 min" },
+      { name: "Color Correction", price: "£120", duration: "180 min" }
+    ]
+  },
+  {
+    id: "haircuts",
     icon: Scissors,
-    title: "Hair Services",
-    description: "Expert cuts, coloring, and treatments by our skilled stylists",
-    image: hairService,
-    duration: "60-180 min",
+    title: "Haircuts",
+    description: "Precision cuts tailored to your style",
+    image: haircutsService,
+    duration: "45-90 min",
     startingPrice: "£35",
     services: [
-      { name: "Hair Cut & Blow Dry", price: "£45", duration: "60 min" },
-      { name: "Hair Coloring", price: "£75", duration: "120 min" },
-      { name: "Hair Treatments", price: "£35", duration: "45 min" },
+      { name: "Cut & Blow Dry", price: "£45", duration: "60 min" },
+      { name: "Restyle", price: "£55", duration: "75 min" },
+      { name: "Trim", price: "£35", duration: "45 min" },
       { name: "Wedding Styling", price: "£85", duration: "90 min" }
+    ]
+  },
+  {
+    id: "hair-treatment",
+    icon: Star,
+    title: "Hair Treatment",
+    description: "Nourishing treatments for healthy hair",
+    image: hairTreatmentService,
+    duration: "30-60 min",
+    startingPrice: "£35",
+    services: [
+      { name: "Keratin Treatment", price: "£85", duration: "120 min" },
+      { name: "Deep Conditioning", price: "£35", duration: "45 min" },
+      { name: "Scalp Treatment", price: "£45", duration: "60 min" },
+      { name: "Protein Treatment", price: "£50", duration: "60 min" }
+    ]
+  },
+  {
+    id: "aesthetics",
+    icon: Zap,
+    title: "Aesthetics",
+    description: "Advanced cosmetic treatments for enhanced natural beauty",
+    image: aestheticsService,
+    duration: "30-90 min",
+    startingPrice: "£150",
+    services: [
+      { name: "Botox Treatment", price: "£150", duration: "30 min" },
+      { name: "Dermal Fillers", price: "£300", duration: "45 min" },
+      { name: "Chemical Peels", price: "£85", duration: "60 min" },
+      { name: "Microneedling", price: "£120", duration: "75 min" }
+    ]
+  },
+  {
+    id: "eyes-brows",
+    icon: Eye,
+    title: "Eyes & Brows",
+    description: "Perfect your look with expert eye and brow treatments",
+    image: eyesBrowsService,
+    duration: "20-90 min",
+    startingPrice: "£15",
+    services: [
+      { name: "Eyebrow Shaping", price: "£15", duration: "20 min" },
+      { name: "Lash Extensions", price: "£65", duration: "90 min" },
+      { name: "Brow & Lash Tinting", price: "£25", duration: "30 min" },
+      { name: "Microblading", price: "£200", duration: "120 min" }
     ]
   },
   {
     id: "nails",
     icon: Hand,
-    title: "Nails & Beauty",
+    title: "Nails",
     description: "Professional nail care and stunning nail art designs",
     image: nailService,
     duration: "30-90 min",
@@ -47,9 +111,9 @@ const services = [
     ]
   },
   {
-    id: "facial",
+    id: "facials",
     icon: Sparkles,
-    title: "Facial Treatments",
+    title: "Facials",
     description: "Rejuvenating skincare treatments for all skin types",
     image: facialService,
     duration: "45-90 min",
@@ -59,21 +123,6 @@ const services = [
       { name: "Anti-Aging Treatment", price: "£75", duration: "75 min" },
       { name: "Hydrating Facial", price: "£65", duration: "60 min" },
       { name: "Brightening Treatment", price: "£70", duration: "70 min" }
-    ]
-  },
-  {
-    id: "eyes-brows",
-    icon: Eye,
-    title: "Eyes & Brows",
-    description: "Perfect your look with expert eye and brow treatments",
-    image: eyesBrowsService,
-    duration: "20-60 min",
-    startingPrice: "£15",
-    services: [
-      { name: "Eyebrow Shaping", price: "£15", duration: "20 min" },
-      { name: "Lash Extensions", price: "£65", duration: "90 min" },
-      { name: "Brow & Lash Tinting", price: "£25", duration: "30 min" },
-      { name: "Threading", price: "£12", duration: "15 min" }
     ]
   },
   {
@@ -107,21 +156,6 @@ const services = [
     ]
   },
   {
-    id: "aesthetics",
-    icon: Zap,
-    title: "Aesthetics",
-    description: "Advanced cosmetic treatments for enhanced natural beauty",
-    image: aestheticsService,
-    duration: "30-90 min",
-    startingPrice: "£150",
-    services: [
-      { name: "Botox Treatment", price: "£150", duration: "30 min" },
-      { name: "Dermal Fillers", price: "£300", duration: "45 min" },
-      { name: "Chemical Peels", price: "£85", duration: "60 min" },
-      { name: "Microneedling", price: "£120", duration: "75 min" }
-    ]
-  },
-  {
     id: "waxing",
     icon: Flower,
     title: "Waxing",
@@ -134,6 +168,21 @@ const services = [
       { name: "Upper Lip", price: "£8", duration: "10 min" },
       { name: "Brazilian Wax", price: "£35", duration: "45 min" },
       { name: "Full Leg Wax", price: "£40", duration: "60 min" }
+    ]
+  },
+  {
+    id: "threading",
+    icon: Wind,
+    title: "Threading",
+    description: "Precise hair removal technique using cotton thread",
+    image: threadingService,
+    duration: "10-30 min",
+    startingPrice: "£8",
+    services: [
+      { name: "Eyebrow Threading", price: "£12", duration: "15 min" },
+      { name: "Upper Lip Threading", price: "£8", duration: "10 min" },
+      { name: "Chin Threading", price: "£10", duration: "12 min" },
+      { name: "Full Face Threading", price: "£25", duration: "30 min" }
     ]
   }
 ];

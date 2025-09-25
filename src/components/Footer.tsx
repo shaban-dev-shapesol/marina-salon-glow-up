@@ -20,11 +20,17 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link to="/services/hair" className="hover:text-primary transition-colors cursor-pointer">Hair Styling & Coloring</Link></li>
-              <li><Link to="/services/nails" className="hover:text-primary transition-colors cursor-pointer">Nail Care & Art</Link></li>
-              <li><Link to="/services/facial" className="hover:text-primary transition-colors cursor-pointer">Facial Treatments</Link></li>
-              <li><Link to="/services/aesthetics" className="hover:text-primary transition-colors cursor-pointer">Beauty & Aesthetics</Link></li>
-              <li><Link to="/services/massages" className="hover:text-primary transition-colors cursor-pointer">Massage Therapy</Link></li>
+              <li><Link to="/services/hair-colouring" className="hover:text-primary transition-colors cursor-pointer">Hair Colouring</Link></li>
+              <li><Link to="/services/haircuts" className="hover:text-primary transition-colors cursor-pointer">Haircuts</Link></li>
+              <li><Link to="/services/hair-treatment" className="hover:text-primary transition-colors cursor-pointer">Hair Treatment</Link></li>
+              <li><Link to="/services/aesthetics" className="hover:text-primary transition-colors cursor-pointer">Aesthetics</Link></li>
+              <li><Link to="/services/eyes-brows" className="hover:text-primary transition-colors cursor-pointer">Eyes & Brows</Link></li>
+              <li><Link to="/services/nails" className="hover:text-primary transition-colors cursor-pointer">Nails</Link></li>
+              <li><Link to="/services/facials" className="hover:text-primary transition-colors cursor-pointer">Facials</Link></li>
+              <li><Link to="/services/makeup" className="hover:text-primary transition-colors cursor-pointer">Make-up</Link></li>
+              <li><Link to="/services/massages" className="hover:text-primary transition-colors cursor-pointer">Massages</Link></li>
+              <li><Link to="/services/waxing" className="hover:text-primary transition-colors cursor-pointer">Waxing</Link></li>
+              <li><Link to="/services/threading" className="hover:text-primary transition-colors cursor-pointer">Threading</Link></li>
             </ul>
           </div>
 

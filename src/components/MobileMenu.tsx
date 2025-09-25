@@ -10,14 +10,17 @@ export const MobileMenu = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
-    { name: "Hair Services", link: "/services/hair" },
-    { name: "Nails & Beauty", link: "/services/nails" },
-    { name: "Facial Treatments", link: "/services/facial" },
+    { name: "Hair Colouring", link: "/services/hair-colouring" },
+    { name: "Haircuts", link: "/services/haircuts" },
+    { name: "Hair Treatment", link: "/services/hair-treatment" },
+    { name: "Aesthetics", link: "/services/aesthetics" },
     { name: "Eyes & Brows", link: "/services/eyes-brows" },
+    { name: "Nails", link: "/services/nails" },
+    { name: "Facials", link: "/services/facials" },
     { name: "Make-up", link: "/services/makeup" },
     { name: "Massages", link: "/services/massages" },
-    { name: "Aesthetics", link: "/services/aesthetics" },
     { name: "Waxing", link: "/services/waxing" },
+    { name: "Threading", link: "/services/threading" },
   ];
 
   return (
