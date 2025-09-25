@@ -132,7 +132,7 @@ export const Pricing = () => {
                   className="w-full"
                   asChild
                 >
-                  <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                     Book Package
                   </a>
                 </Button>

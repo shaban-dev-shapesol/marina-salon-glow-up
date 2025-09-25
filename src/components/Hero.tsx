@@ -37,7 +37,7 @@ export const Hero = () => {
               className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg"
               asChild
             >
-              <a href="https://www.fresha.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                 Book Your Glow-Up
                 <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
               </a>
