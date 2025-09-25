@@ -5,15 +5,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import heroImage from "@/assets/luxury-salon-hero.jpg";
 export const Hero = () => {
   useScrollAnimation();
-
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden parallax-container">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 parallax-element" style={{ transform: 'translateY(0px)' }}>
-        <img 
-          src={heroImage} 
-          alt="Luxury Marina Salon Interior" 
-          className="w-full h-full object-cover opacity-90 scale-110" 
-        />
+      <div className="absolute inset-0 z-0 parallax-element" style={{
+      transform: 'translateY(0px)'
+    }}>
+        <img src={heroImage} alt="Luxury Marina Salon Interior" className="w-full h-full object-cover opacity-90 scale-110" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent"></div>
       </div>
 
@@ -27,7 +24,7 @@ export const Hero = () => {
             <span className="text-sm text-muted-foreground">Rated 5 stars by our clients</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-on-scroll animate-on-scroll-delay">
+          <h1 className="md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-on-scroll animate-on-scroll-delay text-4xl">
             Transform Your
             <span className="block luxury-gradient py-[8px]">Beauty Journey</span>
             <span className="block">with Marina Salon</span>
@@ -38,23 +35,13 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-3">
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg hover-lift hover-glow"
-              asChild
-            >
+            <Button variant="default" size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg hover-lift hover-glow" asChild>
               <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                 Book Your Glow-Up
                 <Heart className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform duration-300" />
               </a>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg hover-scale"
-              asChild
-            >
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg hover-scale" asChild>
               <Link to="/services">
                 Explore Services
               </Link>
