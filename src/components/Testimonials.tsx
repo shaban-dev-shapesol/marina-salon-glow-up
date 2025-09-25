@@ -1,4 +1,11 @@
 import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -69,43 +76,52 @@ export const Testimonials = () => {
             </div>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-luxury transition-all duration-300 relative group"
-              >
-                {/* Quote Icon */}
-                <div className="absolute top-6 right-6 text-primary/20">
-                  <Quote className="h-8 w-8" />
-                </div>
+          {/* Testimonials Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-luxury transition-all duration-300 relative group h-full">
+                    {/* Quote Icon */}
+                    <div className="absolute top-6 right-6 text-primary/20">
+                      <Quote className="h-8 w-8" />
+                    </div>
 
-                {/* Rating */}
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
+                    {/* Rating */}
+                    <div className="flex items-center space-x-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                      ))}
+                    </div>
 
-                {/* Testimonial Text */}
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                  "{testimonial.text}"
-                </p>
+                    {/* Testimonial Text */}
+                    <p className="text-muted-foreground leading-relaxed mb-6 italic">
+                      "{testimonial.text}"
+                    </p>
 
-                {/* Client Info */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-semibold text-primary">
-                    {testimonial.image}
+                    {/* Client Info */}
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-semibold text-primary">
+                        {testimonial.image}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold">{testimonial.name}</h4>
+                        <p className="text-sm text-muted-foreground">{testimonial.service}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.service}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
 
           {/* Review Platforms */}
           <div className="mt-16 text-center">
