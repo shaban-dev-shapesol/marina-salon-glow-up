@@ -26,7 +26,11 @@ export const Header = () => {
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                       <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md text-white relative overflow-hidden" style={{backgroundImage: 'url(/src/assets/salon-interior-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                       <Link to="/services" className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md text-white relative overflow-hidden" style={{
+                      backgroundImage: 'url(/src/assets/salon-interior-bg.jpg)',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}>
                         <div className="absolute inset-0 bg-black/60 rounded-md"></div>
                         <div className="mb-2 mt-4 text-lg font-medium text-white relative z-10">
                           All Services
@@ -167,10 +171,7 @@ export const Header = () => {
 
         <div className="flex items-center space-x-4">
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
-              <Clock className="h-4 w-4" />
-              <span>Mon-Sun 10AM-7PM</span>
-            </div>
+            
             <a href="tel:01613322350" className="flex items-center space-x-1 hover:text-primary transition-colors">
               <Phone className="h-4 w-4" />
               <span>Book Now</span>
