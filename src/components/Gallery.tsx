@@ -6,43 +6,64 @@ import galleryImage3 from "@/assets/gallery/salon-interior-3.jpg";
 import galleryImage4 from "@/assets/gallery/salon-interior-4.jpg";
 import galleryImage5 from "@/assets/gallery/salon-interior-5.jpg";
 import galleryImage6 from "@/assets/gallery/salon-interior-6.jpg";
+import galleryImage7 from "@/assets/gallery/salon-interior-7.jpg";
+import galleryImage8 from "@/assets/gallery/salon-interior-8.jpg";
+import galleryImage9 from "@/assets/gallery/salon-interior-9.jpg";
 
 const galleryImages = [
   {
     id: 1,
     image: galleryImage1,
-    alt: "Luxury salon styling stations with Hollywood lighting",
-    title: "Styling Stations"
+    alt: "Marina Salon luxury lounge area with comfortable white seating",
+    title: "Lounge Area"
   },
   {
     id: 2,
     image: galleryImage2,
-    alt: "Elegant salon waiting area with plush seating",
+    alt: "Marina Salon elegant reception and waiting area",
     title: "Reception Area"
   },
   {
     id: 3,
     image: galleryImage3,
-    alt: "Premium nail salon station with pedicure chairs",
-    title: "Nail Station"
+    alt: "Marina Salon modern storefront exterior with signature gold branding",
+    title: "Storefront"
   },
   {
     id: 4,
     image: galleryImage4,
-    alt: "Modern hair washing station with comfortable chairs",
-    title: "Wash Station"
+    alt: "Marina Salon window display showcasing premium hair care products",
+    title: "Product Display"
   },
   {
     id: 5,
     image: galleryImage5,
-    alt: "Luxurious beauty treatment room with spa atmosphere",
-    title: "Treatment Room"
+    alt: "Marina Salon outdoor entrance with stylish architectural design",
+    title: "Entrance View"
   },
   {
     id: 6,
     image: galleryImage6,
-    alt: "Salon product display with premium beauty products",
-    title: "Product Display"
+    alt: "Marina Salon distinctive gold geometric window design",
+    title: "Signature Design"
+  },
+  {
+    id: 7,
+    image: galleryImage7,
+    alt: "Marina Salon full storefront view with elegant branding",
+    title: "Front Facade"
+  },
+  {
+    id: 8,
+    image: galleryImage8,
+    alt: "Marina Salon welcoming entrance with floor-to-ceiling windows",
+    title: "Main Entrance"
+  },
+  {
+    id: 9,
+    image: galleryImage9,
+    alt: "Marina Salon interior with professional styling stations and reception",
+    title: "Styling Area"
   }
 ];
 
