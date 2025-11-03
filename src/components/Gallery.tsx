@@ -9,6 +9,12 @@ import galleryImage6 from "@/assets/gallery/salon-interior-6.jpg";
 import galleryImage7 from "@/assets/gallery/salon-interior-7.jpg";
 import galleryImage8 from "@/assets/gallery/salon-interior-8.jpg";
 import galleryImage9 from "@/assets/gallery/salon-interior-9.jpg";
+import galleryImage10 from "@/assets/gallery/salon-interior-10.jpg";
+import galleryImage11 from "@/assets/gallery/salon-interior-11.jpg";
+import galleryImage12 from "@/assets/gallery/salon-interior-12.jpg";
+import galleryImage13 from "@/assets/gallery/salon-interior-13.jpg";
+import galleryImage14 from "@/assets/gallery/salon-interior-14.jpg";
+import galleryImage15 from "@/assets/gallery/salon-interior-15.jpg";
 
 const galleryImages = [
   {
@@ -64,6 +70,42 @@ const galleryImages = [
     image: galleryImage9,
     alt: "Marina Salon interior with professional styling stations and reception",
     title: "Styling Area"
+  },
+  {
+    id: 10,
+    image: galleryImage10,
+    alt: "Marina Salon professional hair styling station",
+    title: "Hair Styling"
+  },
+  {
+    id: 11,
+    image: galleryImage11,
+    alt: "Marina Salon beauty treatment area",
+    title: "Treatment Area"
+  },
+  {
+    id: 12,
+    image: galleryImage12,
+    alt: "Marina Salon comfortable client seating",
+    title: "Client Area"
+  },
+  {
+    id: 13,
+    image: galleryImage13,
+    alt: "Marina Salon premium services station",
+    title: "Services Station"
+  },
+  {
+    id: 14,
+    image: galleryImage14,
+    alt: "Marina Salon elegant interior design",
+    title: "Interior Design"
+  },
+  {
+    id: 15,
+    image: galleryImage15,
+    alt: "Marina Salon luxurious amenities",
+    title: "Amenities"
   }
 ];
 

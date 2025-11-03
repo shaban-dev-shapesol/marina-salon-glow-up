@@ -14,47 +14,247 @@ const PackagesPage = () => {
       originalPrice: "£175",
       icon: <Sparkles className="h-6 w-6" />,
       popular: false,
-      description: "Perfect for maintaining your style throughout the month",
+      description: "MONDAY - THURSDAY 10-4pm. Treat yourself to flawless hair with our exclusive blow dry package!",
       services: [
         "4 luxurious blow dries",
-        "Monday-Thursday 10-4pm only",
-        "Flawless hair maintenance",
-        "Monthly styling package"
+        "Professional styling",
+        "Valid Monday-Thursday 10am-4pm",
+        "Perfect for monthly maintenance"
       ],
-      duration: "1 month",
+      duration: "Monthly package",
       savings: "£40"
     },
     {
       name: "Party Glam Package",
       price: "£120",
-      originalPrice: "£140",
+      originalPrice: "",
       icon: <Crown className="h-6 w-6" />,
       popular: true,
-      description: "Perfect for Christmas parties and special occasions",
+      description: "Perfect for everyone preparing for Xmas parties and special occasions",
       services: [
-        "Party glam makeup with lashes",
-        "Kérastase hair treatment & mask",
-        "Wash and blow dry with styling",
-        "Special occasion hair style"
+        "Party Glam Makeup (1 hr 20 mins)",
+        "Tatti Lashes (5 mins)",
+        "Kérastase Treatment (1 hour)",
+        "Special Occasion Hair Style (1 hr 30 mins)"
       ],
-      duration: "4 hours",
-      savings: "£20"
+      duration: "4 hours total",
+      savings: ""
     },
     {
-      name: "Lymphatic Drainage Spa",
-      price: "£100",
-      originalPrice: "£120",
+      name: "Full Head Colour Package",
+      price: "£185",
+      originalPrice: "",
+      icon: <Sparkles className="h-6 w-6" />,
+      popular: true,
+      description: "Receive a free Kérastase hair treatment worth £50 with full head colour",
+      services: [
+        "Full Head Colour (40 mins - L'Oréal)",
+        "Trim Cut & Curly Blow Dry (1 hr 10 mins)",
+        "FREE Kérastase Fusio Dose treatment (30 mins)"
+      ],
+      duration: "2 hours 20 mins",
+      savings: "Save £50"
+    },
+    {
+      name: "Hot Stone & FKZ Facial",
+      price: "£150",
+      originalPrice: "",
       icon: <Star className="h-6 w-6" />,
       popular: false,
-      description: "Relaxing massage package with spa facial",
+      description: "Hot stone massage with our signature deep cleansing facial",
       services: [
-        "Lymphatic drainage massage",
-        "Foot massage (30 mins)",
-        "Smooth & glow facial",
-        "Complete wellness experience"
+        "Hot Stones Massage (1 hr 10 mins)",
+        "FKZ Signature Facial (1 hour)",
+        "FREE Head Massage (25 mins)"
       ],
-      duration: "3.5 hours",
-      savings: "£20"
+      duration: "2 hours 35 mins",
+      savings: ""
+    },
+    {
+      name: "Hot Stones & Lymphatic Drainage with Spa Facial",
+      price: "£140",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Complete relaxation package - massages should be done on different days",
+      services: [
+        "Hot Stones Massage (1 hr 10 mins)",
+        "Lymphatic Drainage (1 hr 10 mins - 1 Area)",
+        "FREE Smooth & Revitalise Facial (1 hr 20 mins)"
+      ],
+      duration: "Multi-session package",
+      savings: ""
+    },
+    {
+      name: "Lymphatic Drainage & Foot Massage with Spa Facial",
+      price: "£100",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Detoxifying massage package - massages should be done on different days",
+      services: [
+        "Lymphatic Drainage (1 hr 10 mins - 1 Area)",
+        "Foot Massage (40 mins)",
+        "FREE Smooth & Glow Facial (1 hr 20 mins)"
+      ],
+      duration: "Multi-session package",
+      savings: ""
+    },
+    {
+      name: "Lux Manicure & Pedicure",
+      price: "£80",
+      originalPrice: "",
+      icon: <Sparkles className="h-6 w-6" />,
+      popular: false,
+      description: "Pamper yourself with full luxury mani & pedi with shellac/gel",
+      services: [
+        "Lux Manicure with shellac (1 hr 10 mins)",
+        "Lux Pedicure with shellac (1 hr 20 mins)",
+        "Professional cuticle care",
+        "Note: Does NOT include gel removal"
+      ],
+      duration: "2 hours 30 mins",
+      savings: ""
+    },
+    {
+      name: "1ml Lip Filler + 1ml Chin Filler",
+      price: "£190",
+      originalPrice: "",
+      icon: <Crown className="h-6 w-6" />,
+      popular: false,
+      description: "Transform your look - receive 2ml filler in total",
+      services: [
+        "Lip filler 1ml (55 mins)",
+        "Chin filler 1ml (55 mins)",
+        "Professional dermal fillers"
+      ],
+      duration: "1 hour 50 mins",
+      savings: ""
+    },
+    {
+      name: "BIAB with French + Shellac Toes",
+      price: "£70",
+      originalPrice: "",
+      icon: <Sparkles className="h-6 w-6" />,
+      popular: false,
+      description: "BIAB on natural nails with French design plus shellac toes",
+      services: [
+        "BIAB - short/medium (1 hr 15 mins)",
+        "French Mani design (20 mins)",
+        "Gel polish toes - no removal (40 mins)",
+        "French Pedi design (15 mins)",
+        "Note: Removal NOT included"
+      ],
+      duration: "2 hours 30 mins",
+      savings: ""
+    },
+    {
+      name: "Gel Hands + Gel Toes (with removal)",
+      price: "£58",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Long-lasting, glossy, chip resistant nails with removal",
+      services: [
+        "Gel removal + Gel Toes (1 hour)",
+        "Gel removal + Gel hands (1 hr 10 mins)",
+        "Cuticle care and shaping"
+      ],
+      duration: "2 hours 10 mins",
+      savings: ""
+    },
+    {
+      name: "Gel Hands and Toes",
+      price: "£48",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Long-lasting, glossy nails for both hands and feet",
+      services: [
+        "Gel polish toes (40 mins)",
+        "Gel polish hands - shellac (1 hour)",
+        "Shaping and cuticle care",
+        "Note: Does NOT include removal"
+      ],
+      duration: "1 hour 40 mins",
+      savings: ""
+    },
+    {
+      name: "LVL + Brow Lamination",
+      price: "£75",
+      originalPrice: "",
+      icon: <Crown className="h-6 w-6" />,
+      popular: false,
+      description: "Gorgeously curled lashes and laminated brows with tint",
+      services: [
+        "Eyelash Lift (LVL) with Tint (1 hour)",
+        "Brow lamination with Tint + thread (45 mins)",
+        "Choose threading or waxing"
+      ],
+      duration: "1 hour 45 mins",
+      savings: ""
+    },
+    {
+      name: "LVL + Brow Lamination (no tint/thread)",
+      price: "£65",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Gorgeous lifted lashes and laminated brows - basic package",
+      services: [
+        "Brow lamination (35 mins)",
+        "Eyelash Lift (LVL) - No tint (35 mins)",
+        "Note: Tint and thread/wax NOT included"
+      ],
+      duration: "1 hour 10 mins",
+      savings: ""
+    },
+    {
+      name: "LVL + Brow Thread & Tint",
+      price: "£45",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Gorgeous lifted lashes and freshly shaped brows with tinting",
+      services: [
+        "Eyelash Lift (LVL) with Tint (1 hour)",
+        "Brow Threading (25 mins)",
+        "Professional tinting for both"
+      ],
+      duration: "1 hour 25 mins",
+      savings: ""
+    },
+    {
+      name: "Express Manicure + Pedicure with Polish/Shellac",
+      price: "£65",
+      originalPrice: "",
+      icon: <Sparkles className="h-6 w-6" />,
+      popular: false,
+      description: "Quick service with choice of normal polish or shellac",
+      services: [
+        "Express Manicure (35 mins)",
+        "Express Pedicure (30 mins)",
+        "Gel polish hands - shellac (1 hour)",
+        "Gel polish toes (40 mins)"
+      ],
+      duration: "2 hours 45 mins",
+      savings: ""
+    },
+    {
+      name: "Express Manicure + Pedicure",
+      price: "£45",
+      originalPrice: "",
+      icon: <Star className="h-6 w-6" />,
+      popular: false,
+      description: "Cuticle cleaning, shaping, hard skin removal and massage",
+      services: [
+        "Express Manicure (35 mins)",
+        "Express Pedicure (30 mins)",
+        "Relaxing massage to finish",
+        "Note: No polish or shellac included"
+      ],
+      duration: "1 hour 5 mins",
+      savings: ""
     }
   ];
 
