@@ -9,10 +9,12 @@ import { Gallery } from "@/components/Gallery";
 import { InstagramSection } from "@/components/InstagramSection";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ChristmasPromoPopup } from "@/components/ChristmasPromoPopup";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
+      <ChristmasPromoPopup />
       <Header />
       <main>
         <Hero />
