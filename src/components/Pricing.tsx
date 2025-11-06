@@ -145,7 +145,7 @@ export const Pricing = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`relative p-8 rounded-xl shadow-elegant transition-all duration-500 hover:shadow-luxury hover-lift animate-on-scroll ${
+                className={`relative p-8 rounded-xl shadow-elegant transition-all duration-500 hover:shadow-luxury hover-lift animate-on-scroll flex flex-col ${
                   pkg.popular
                     ? "bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20 scale-105"
                     : "bg-card border border-border"
@@ -171,7 +171,7 @@ export const Pricing = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8 flex-1">
                   {pkg.services.map((service, serviceIndex) => (
                     <li key={serviceIndex} className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -182,7 +182,7 @@ export const Pricing = () => {
 
                 <Button 
                   variant={pkg.popular ? "book" : "elegant"} 
-                  className="w-full hover-glow"
+                  className="w-full hover-glow mt-auto"
                   asChild
                 >
                   <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
