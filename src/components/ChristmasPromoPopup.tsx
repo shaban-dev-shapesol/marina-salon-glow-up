@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Sparkles, X } from "lucide-react";
 
 export const ChristmasPromoPopup = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const hasSeenPromo = localStorage.getItem("christmas-promo-seen");
@@ -19,6 +22,23 @@ export const ChristmasPromoPopup = () => {
   const handleClose = () => {
     setOpen(false);
     localStorage.setItem("christmas-promo-seen", "true");
+  };
+
+  const handleBookAppointment = () => {
+    handleClose();
+    
+    // Set pre-filled message in localStorage
+    localStorage.setItem("contact-message", "I'm interested in booking a Christmas appointment with 20% off massage and facials!");
+    
+    // Navigate to home page if not already there, then scroll to contact
+    if (location.pathname !== "/") {
+      navigate("/#contact");
+    } else {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -54,7 +74,7 @@ export const ChristmasPromoPopup = () => {
         
         <div className="flex flex-col gap-3 mt-4">
           <Button
-            onClick={handleClose}
+            onClick={handleBookAppointment}
             className="w-full"
             size="lg"
           >

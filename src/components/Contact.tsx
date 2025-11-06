@@ -1,10 +1,46 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { toast } from "sonner";
 
 export const Contact = () => {
   useScrollAnimation();
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  useEffect(() => {
+    // Check for pre-filled message from Christmas popup
+    const preFilledMessage = localStorage.getItem("contact-message");
+    if (preFilledMessage) {
+      setMessage(preFilledMessage);
+      localStorage.removeItem("contact-message");
+      
+      // Focus on the message textarea
+      setTimeout(() => {
+        const textarea = document.querySelector('textarea[name="message"]') as HTMLTextAreaElement;
+        if (textarea) {
+          textarea.focus();
+        }
+      }, 500);
+    }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    toast.success("Thank you! We'll get back to you soon.");
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-accent/20 to-background">
@@ -98,8 +134,64 @@ export const Contact = () => {
             </Card>
           </div>
 
-          {/* Booking CTA */}
-          <div className="flex flex-col justify-center animate-on-scroll animate-on-scroll-delay">
+          {/* Contact Form & Booking CTA */}
+          <div className="flex flex-col justify-center animate-on-scroll animate-on-scroll-delay space-y-6">
+            {/* Contact Form */}
+            <Card className="glass-effect border-border/50 p-6">
+              <CardHeader>
+                <CardTitle>Send Us a Message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone (Optional)</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="Your phone number"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      placeholder="Tell us about your appointment..."
+                      rows={4}
+                    />
+                  </div>
+                  <Button type="submit" variant="book" className="w-full">
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
             <Card className="glass-effect border-primary/20 p-8 text-center hover-lift transition-all duration-500">
               <div className="space-y-6">
                 <div className="space-y-4">
