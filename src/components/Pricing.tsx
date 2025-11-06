@@ -89,6 +89,57 @@ export const Pricing = () => {
             </p>
           </div>
 
+          {/* Individual Services */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Hair Services */}
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll">
+              <h3 className="text-2xl font-bold mb-6 text-center">Hair Services</h3>
+              <div className="space-y-4">
+                {hairServices.map((service, index) => (
+                  <div key={index} className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <h4 className="font-semibold">{service.name}</h4>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
+                    </div>
+                    <span className="font-bold text-primary ml-4">{service.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Beauty Services */}
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay">
+              <h3 className="text-2xl font-bold mb-6 text-center">Beauty & Facial</h3>
+              <div className="space-y-4">
+                {beautyServices.map((service, index) => (
+                  <div key={index} className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <h4 className="font-semibold">{service.name}</h4>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
+                    </div>
+                    <span className="font-bold text-primary ml-4">{service.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Nail Services */}
+            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay-2">
+              <h3 className="text-2xl font-bold mb-6 text-center">Nail Care</h3>
+              <div className="space-y-4">
+                {nailServices.map((service, index) => (
+                  <div key={index} className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <h4 className="font-semibold">{service.name}</h4>
+                      <p className="text-sm text-muted-foreground">{service.description}</p>
+                    </div>
+                    <span className="font-bold text-primary ml-4">{service.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Packages */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {packages.map((pkg, index) => (
@@ -140,57 +191,6 @@ export const Pricing = () => {
                 </Button>
               </div>
             ))}
-          </div>
-
-          {/* Individual Services */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Hair Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll">
-              <h3 className="text-2xl font-bold mb-6 text-center">Hair Services</h3>
-              <div className="space-y-4">
-                {hairServices.map((service, index) => (
-                  <div key={index} className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h4 className="font-semibold">{service.name}</h4>
-                      <p className="text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                    <span className="font-bold text-primary ml-4">{service.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Beauty Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay">
-              <h3 className="text-2xl font-bold mb-6 text-center">Beauty & Facial</h3>
-              <div className="space-y-4">
-                {beautyServices.map((service, index) => (
-                  <div key={index} className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h4 className="font-semibold">{service.name}</h4>
-                      <p className="text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                    <span className="font-bold text-primary ml-4">{service.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Nail Services */}
-            <div className="bg-card rounded-xl p-8 shadow-soft hover-lift transition-all duration-500 animate-on-scroll animate-on-scroll-delay-2">
-              <h3 className="text-2xl font-bold mb-6 text-center">Nail Care</h3>
-              <div className="space-y-4">
-                {nailServices.map((service, index) => (
-                  <div key={index} className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h4 className="font-semibold">{service.name}</h4>
-                      <p className="text-sm text-muted-foreground">{service.description}</p>
-                    </div>
-                    <span className="font-bold text-primary ml-4">{service.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* CTA */}
