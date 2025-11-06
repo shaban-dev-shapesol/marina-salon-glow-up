@@ -11,7 +11,7 @@ export const Footer = () => {
               Professional hair, beauty, and wellness services in the heart of Manchester.
             </p>
             <div className="flex space-x-4">
-              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://www.instagram.com/fatima_fkz_/', '_blank')} />
+              <Instagram className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://www.instagram.com/marinasalonbyfkz/', '_blank')} />
               <Facebook className="h-5 w-5 opacity-70 hover:opacity-100 hover:text-primary transition-colors cursor-pointer" onClick={() => window.open('https://facebook.com/marinasalon', '_blank')} />
             </div>
           </div>

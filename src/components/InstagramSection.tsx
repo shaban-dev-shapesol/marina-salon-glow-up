@@ -61,13 +61,13 @@ export const InstagramSection = () => {
             Stay updated with our latest work, beauty tips, and behind-the-scenes moments at Marina Salon
           </p>
           <a 
-            href="https://www.instagram.com/fatima_fkz_/" 
+            href="https://www.instagram.com/marinasalonbyfkz/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-luxury hover:scale-105 transition-all duration-300"
           >
             <Instagram className="h-6 w-6" />
-            @fatima_fkz_
+            @marinasalonbyfkz
           </a>
         </div>
 
@@ -75,7 +75,7 @@ export const InstagramSection = () => {
           {instagramPosts.map((post, index) => (
             <a
               key={post.id}
-              href="https://www.instagram.com/fatima_fkz_/"
+              href="https://www.instagram.com/marinasalonbyfkz/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-lg aspect-square hover-scale animate-on-scroll"
