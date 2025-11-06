@@ -10,18 +10,14 @@ export const ChristmasPromoPopup = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const hasSeenPromo = localStorage.getItem("christmas-promo-seen");
-    if (!hasSeenPromo) {
-      const timer = setTimeout(() => {
-        setOpen(true);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setOpen(false);
-    localStorage.setItem("christmas-promo-seen", "true");
   };
 
   const handleBookAppointment = () => {
