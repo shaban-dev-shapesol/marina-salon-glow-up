@@ -24,7 +24,7 @@ export const Hero = () => {
             <span className="text-sm text-muted-foreground">Rated 5 stars by our clients</span>
           </div>
 
-          <h1 className="md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-on-scroll animate-on-scroll-delay text-4xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight animate-on-scroll animate-on-scroll-delay">
             Transform Your
             <span className="block luxury-gradient py-[8px]">Beauty Journey</span>
             <span className="block">with Marina Salon</span>
