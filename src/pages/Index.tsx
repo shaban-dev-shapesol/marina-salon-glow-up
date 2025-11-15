@@ -6,6 +6,7 @@ import { Pricing } from "@/components/Pricing";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Gallery } from "@/components/Gallery";
+import { Cafe } from "@/components/Cafe";
 import { InstagramSection } from "@/components/InstagramSection";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ const Index = () => {
         <FAQ />
         <Testimonials />
         <Gallery />
+        <Cafe />
         <InstagramSection />
         <Contact />
       </main>
