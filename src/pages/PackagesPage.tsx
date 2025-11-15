@@ -19,7 +19,8 @@ const PackagesPage = () => {
         "4 luxurious blow dries",
         "Professional styling",
         "Valid Monday-Thursday 10am-4pm",
-        "Perfect for monthly maintenance"
+        "Perfect for monthly maintenance",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "Monthly package",
       savings: "£40"
@@ -35,7 +36,8 @@ const PackagesPage = () => {
         "Party Glam Makeup (1 hr 20 mins)",
         "Tatti Lashes (5 mins)",
         "Kérastase Treatment (1 hour)",
-        "Special Occasion Hair Style (1 hr 30 mins)"
+        "Special Occasion Hair Style (1 hr 30 mins)",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "4 hours total",
       savings: ""
@@ -50,7 +52,8 @@ const PackagesPage = () => {
       services: [
         "Full Head Colour (40 mins - L'Oréal)",
         "Trim Cut & Curly Blow Dry (1 hr 10 mins)",
-        "FREE Kérastase Fusio Dose treatment (30 mins)"
+        "FREE Kérastase Fusio Dose treatment (30 mins)",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "2 hours 20 mins",
       savings: "Save £50"
@@ -65,7 +68,8 @@ const PackagesPage = () => {
       services: [
         "Hot Stones Massage (1 hr 10 mins)",
         "FKZ Signature Facial (1 hour)",
-        "FREE Head Massage (25 mins)"
+        "FREE Head Massage (25 mins)",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "2 hours 35 mins",
       savings: ""
@@ -80,7 +84,8 @@ const PackagesPage = () => {
       services: [
         "Hot Stones Massage (1 hr 10 mins)",
         "Lymphatic Drainage (1 hr 10 mins - 1 Area)",
-        "FREE Smooth & Revitalise Facial (1 hr 20 mins)"
+        "FREE Smooth & Revitalise Facial (1 hr 20 mins)",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "Multi-session package",
       savings: ""
@@ -95,7 +100,8 @@ const PackagesPage = () => {
       services: [
         "Lymphatic Drainage (1 hr 10 mins - 1 Area)",
         "Foot Massage (40 mins)",
-        "FREE Smooth & Glow Facial (1 hr 20 mins)"
+        "FREE Smooth & Glow Facial (1 hr 20 mins)",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "Multi-session package",
       savings: ""
@@ -111,7 +117,8 @@ const PackagesPage = () => {
         "Lux Manicure with shellac (1 hr 10 mins)",
         "Lux Pedicure with shellac (1 hr 20 mins)",
         "Professional cuticle care",
-        "Note: Does NOT include gel removal"
+        "Note: Does NOT include gel removal",
+        "<span class='font-black text-black dark:text-white tracking-wider text-lg'>FREE</span> coffee"
       ],
       duration: "2 hours 30 mins",
       savings: ""
@@ -341,7 +348,7 @@ const PackagesPage = () => {
                       {pkg.services.map((service, serviceIndex) => (
                         <li key={serviceIndex} className="flex items-start space-x-3">
                           <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{service}</span>
+                          <span className="text-sm" dangerouslySetInnerHTML={{ __html: service }}></span>
                         </li>
                       ))}
                     </ul>
