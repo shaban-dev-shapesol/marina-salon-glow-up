@@ -66,8 +66,37 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold">Opening Hours</h4>
             <div className="space-y-1 text-sm opacity-90">
               <div className="flex justify-between">
-                <span>Mon-Sun</span>
-                <span>10AM-7PM</span>
+                <span>Monday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Tuesday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Wednesday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Thursday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Friday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Saturday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sunday</span>
+                <span>09:00 - 19:00</span>
+              </div>
+              <div className="mt-3 pt-3 border-t border-background/20">
+                <p className="text-xs font-semibold">Closed:</p>
+                <p className="text-xs">25th & 26th December</p>
+                <p className="text-xs">1st January</p>
               </div>
             </div>
           </div>
