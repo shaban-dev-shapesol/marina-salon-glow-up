@@ -34,6 +34,14 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Policies */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold">Policies</h4>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li><Link to="/policy" className="hover:text-primary transition-colors cursor-pointer">Patch Test Policy</Link></li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
