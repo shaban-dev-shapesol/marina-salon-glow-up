@@ -326,13 +326,13 @@ const ServiceDetailPage = () => {
                     <span>Expert Care</span>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <Button size="lg" variant="luxury" className="hover-lift hover-glow" asChild>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" variant="luxury" className="hover-lift hover-glow w-full sm:w-auto" asChild>
                     <a href="https://www.fresha.com/a/marina-salon-by-fkz-hair-and-beauty-manchester-3-5-keepers-quay-ukvxpg8p/all-offer?menu=true&pId=449722" target="_blank" rel="noopener noreferrer">
                       Book Appointment
                     </a>
                   </Button>
-                  <Button size="lg" variant="elegant" className="hover-scale" asChild>
+                  <Button size="lg" variant="elegant" className="hover-scale w-full sm:w-auto" asChild>
                     <Link to="/contact">Ask Questions</Link>
                   </Button>
                 </div>
