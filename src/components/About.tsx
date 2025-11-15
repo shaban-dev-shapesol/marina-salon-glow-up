@@ -26,9 +26,15 @@ export const About = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Founded by master stylist Fatima Khan-Zaman (FKZ), Marina Salon was born from a vision to create a sanctuary where beauty meets artistry. Located in the heart of Manchester at Keepers Quay, our salon has become synonymous with excellence, innovation, and personalized service.
               </p>
+              
+              <h4 className="text-xl font-semibold pt-4">Meet Fatima – Founder & Master Hair Stylist</h4>
               <p className="text-muted-foreground leading-relaxed">
-                Our team of internationally trained professionals brings together diverse expertise from London, Paris, and Milan, ensuring that every client receives world-class treatments tailored to their unique style and needs.
+                With over 25 years of international experience, Fatima has honed her craft in Dubai, Morocco, and Paris — each city shaping her refined, artistic approach to hair styling. Her deep expertise in diverse hair types and techniques ensures every client receives tailored, high-quality results.
               </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Now based here, Fatima has trained her team to uphold the same high standards she's known for. Whether you're in her chair or a team member's, you can expect the same level of care, precision, and professionalism — every time.
+              </p>
+              
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">Located at 3-5 Keepers Quay, Manchester</span>
